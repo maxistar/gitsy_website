@@ -50,4 +50,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ## Website Deployment
 
 - actions
-- in CI/CD.
+- in CI/CD;
