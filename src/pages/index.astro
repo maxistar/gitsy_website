@@ -1,5 +1,6 @@
 ---
-
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
 ---
 
 <html lang="en">
@@ -11,6 +12,7 @@
 		<title>My Astro Site</title>
 	</head>
 	<body>
+		<Navigation />
 		<h1>GitSy(nc)</h1>
 		<h2>easy way to synchronize your notes with git</h2>
 		
@@ -18,5 +20,10 @@
 		
 		<p>Stay tined this site is under construction!</p>
 		
+		
+		<a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/updates/">Updates</a>
+        <a href="/terms/">Terms and conditions</a>
 	</body>
 </html>
