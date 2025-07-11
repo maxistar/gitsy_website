@@ -1,14 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "GitSy(nc)";
-
+import Greeting from '../components/Greeting';
 ---
 <BaseLayout pageTitle={pageTitle}>
-	
-		<h2>easy way to synchronize your notes with git</h2>
-		
-		<p>Git is a software used by developers to sync the code between computers. Git can help to work with complex projects across many developers. But can it be helpful for non-developers to synchronize their obsidian notes - of course! There are many plugins for this and on this site you will find many useful instructions how to do this!</p>
-		
-		<p>Stay tined this site is under construction!</p>
+
+    <h2>easy way to synchronize your notes with git</h2>
+
+    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+    
+    <p>Git is a software used by developers to sync the code between computers. Git can help to work with complex
+        projects across many developers. But can it be helpful for non-developers to synchronize their obsidian notes -
+        of course! There are many plugins for this and on this site you will find many useful instructions how to do
+        this!</p>
+
+    <p>Stay tined this site is under construction!</p>
 
 </BaseLayout>
