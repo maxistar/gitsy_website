@@ -1,23 +1,9 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts = Object.values(import.meta.glob('./updates/*.md', { eager: true }));
+
 ---
+<BaseLayout pageName="Updates">
+	{allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+</BaseLayout>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Terms and Conditions</title>
-	</head>
-	<body>
-		<Navigation />
-		<h1>Updates</h1>
-
-    <ul>
-      <li><a href="/updates/update-1/">Post 1</a></li>
-    </ul>
-
-	</body>
-</html>
