@@ -6,16 +6,18 @@ title: Frequently Asked Questions
 
 
 
-- у меня iPhone могу я использовать программу?
-- нет программа только для андроид
+> I have an iPhone. Can I use the app?
 
-- у меня виндовс могу я использовать программу?
-  - нет, но можно пользоваться стационарным клиентом, в сети можно найти множество примеров как это можно делать.
+– No, the app is only available for Android.
 
-- могу я синхронизировать заметки с устройствами на разных платформах?
+> I have Windows. Can I use the app?
 
-- да конечно! но gitsy работает только на андроид.
+– No, but you can use the desktop client. There are many examples online showing how to do this.
 
-- видит ли программа данные других программ на устройстве?
-  - нет это невозможно. из-за этого приходится копировать данные между хранилищами, но зато программа не требует доступа ко всем файлам на устройстве.
+> Can I sync notes across devices on different platforms?
 
+– Yes, of course! But Gitsy only works on Android.
+
+> Does the app have access to data from other apps on the device?
+
+– No, that's not possible. Because of this, you have to copy data between storages manually, but the app doesn't require access to all files on your device.

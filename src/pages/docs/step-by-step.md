@@ -4,30 +4,25 @@ title: About Application
 ---
 
 
+### Getting Started
 
-### Начало работы
+- Install the program
+- Create a new project
+- Enter username and password
+- Select an empty folder for synchronization
+- Click continue
 
-- устанавливаем программу
-- создаем новый проект
-- вводим имя пользователя и пароль
-- выбираем пустую папку для синхронизации
-- нажимаем продолжить
+### Synchronization
 
+- Synchronization starts automatically if more than an hour has passed since the last synchronization
 
-### Синхронизация
+- Synchronization can be forced by clicking "Synchronize" from the context menu
 
-- синхронизация начинается автоматически если с момента предыдущей синхронизации прошло более часа
+- Conflicts must be resolved manually. The program is intended for note synchronization, so it won't be a problem to keep the text you consider more correct.
 
-- синхронизацию можно начать принудительно если нажать синхронизировать из контекстного меню
+## Repository Deletion
 
-- конфликты разрешаются вручную. Предполагается что программа предназначена для синхронизации заметок, а значит не будет проблемой оставить тот текст который вы сочтете более правильным.
-
-
-## Удаление репозитория
-
-- выбираем удалить в контекстном меню.
-- при удалении важно понимать что будет удалена только локальная копия, копия на сервер останется и вы сможете восстановить ее в любое время.
-- перед удалением рекомендуется синхронизировать вашу локальную версию с версией на сервере.
-
-
+- Select "Delete" from the context menu
+- When deleting, it's important to understand that only the local copy will be deleted, the server copy will remain and you can restore it at any time
+- Before deletion, it's recommended to synchronize your local version with the server version
 

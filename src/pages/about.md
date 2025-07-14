@@ -7,22 +7,18 @@ title: About Application
 
 
 
-- это программа для андроид, которая позволяет синхронизировать файлы между мобильным телефоном и удаленным git репозиторием
+— This is an Android app that allows you to synchronize files between a mobile phone and a remote Git repository.
 
+## Why was it created?
 
-Зачем она создана?
+The developer couldn’t find a tool that suited his personal needs, so he made his own. For a long time, he used Termux in combination with Termux-Widgets, but this solution turned out to be difficult to set up for new projects. With this custom app, the task becomes much simpler.
 
-Разработчик не нашел инструмент который бы был полезен лично ему поэтому сделал свой собственный. Долгое время разработчик пользовался Termux в связке с Termux-Widgets, но это решение оказалось сложно настраивать при настройке новых проектов. В случае с собственным приложением эта задача становится очень простой.
+### How does the app work?
+— The app functions as a Git client.
 
-## Как работает программа?
+## Contact the developer
+— I would be happy to receive your feedback about the app.
 
-- программа представляет собой git клиент.
+## Blog
 
-## Связь с разработчиком
-
-
-- я буду рад получить от вас обратную связь о работе прогдаммы.
-
-## Блог
-
-- в блоге публикуется актуальная информация о приложении и его функционале.
+— The blog publishes up-to-date information about the app and its features.
