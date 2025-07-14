@@ -6,9 +6,9 @@ title: Roadmap
 
 
 
-## Дорожная карта
+## Roadmap
 
-- [x] создать MVP
-- [ ] подключать репозиторий через oath
-- [ ] сделать поддержку ssh ключей шифрования
-- [ ] сделать поддержку работы по таймеру
+- [x] create MVP
+- [ ] connect repository via oath
+- [ ] make support for ssh encryption keys
+- [ ] make support for timer operation
