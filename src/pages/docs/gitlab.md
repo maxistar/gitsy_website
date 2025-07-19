@@ -14,6 +14,8 @@ title: Creating a Private GitLab Repository and Setting Up HTTPS Access
 4. Select "Private" under "Visibility Level"
 5. Click "Create project"
 
+![](/images/gitlab_create_repository.png)
+
 ## Setting Up HTTPS Access
 
 1. Generate a Personal Access Token:
@@ -25,17 +27,21 @@ title: Creating a Private GitLab Repository and Setting Up HTTPS Access
    - Click "Create personal access token"
    - Copy the generated token immediately (you won't be able to see it again)
 
+![](/images/gitlab_create_token_properties.png)
+
 2. Using the token for HTTPS access:
    - When cloning or pushing to your repository, use this format:
 
-   ```bash
-   https://YOUR_USERNAME:YOUR_TOKEN@gitlab.com/YOUR_USERNAME/YOUR_PROJECT.git
-   ```
+   `https://gitlab.com/YOUR_USERNAME/YOUR_PROJECT.git`
+
+![](/images/gitlab_test_notes.png)
+
 
    - Replace:
-     - `YOUR_USERNAME` with your GitLab username
-     - `YOUR_TOKEN` with your personal access token
+     - `YOUR_USERNAME` with your GitLab username     
      - `YOUR_PROJECT` with your project name
+
+![](/images/gitlab_use_credentials.png)
 
 ## Important Notes
 
