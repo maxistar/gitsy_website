@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownLayout.astro
+layout: ../../../layouts/MarkdownLayout.astro
 title: Создание приватного репозитория GitLab и настройка HTTPS-доступа
 ---
 
