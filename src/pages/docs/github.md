@@ -1,18 +1,18 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
-title: Creating a Private GitHub Repository and Setting Up HTTPS Access
+title: Creating a GitHub Repository and Setting Up HTTPS Access
 ---
 
 
-
-
-## Creating a Private Repository
+## Creating a Repository
 
 1. Go to [GitHub](https://github.com) and sign in to your account
 2. Click the "+" icon in the top right corner and select "New repository"
 3. In the repository name field, enter your desired repository name
 4. Select "Private" under "Repository visibility"
 5. Click the "Create repository" button
+
+![](/images/github_create_repository.png)
 
 ## Setting Up HTTPS Access
 
@@ -25,19 +25,28 @@ title: Creating a Private GitHub Repository and Setting Up HTTPS Access
    - Give your token a descriptive name
    - Select "repo" scope under "Repository access"
    - Click "Generate token"
-   - Copy the generated token immediately (you won't be able to see it again)
+   - Copy the generated token immediately (you won't be able to see it again) 
 
-2. Using the token for HTTPS access:
+![](/images/github_create_token.png)
+![](/images/github_create_token_properties.png)
+
+1. Using the token for HTTPS access:
    - When cloning or pushing to your repository, use this format:
-   ```bash
-   https://YOUR_USERNAME:YOUR_PAT@github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-   ```
+   `
+   https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+   `
+
+![](/images/github_test_notes.png)
 
    - Replace:
      - `YOUR_USERNAME` with your GitHub username
-     - `YOUR_PAT` with your personal access token
      - `YOUR_REPOSITORY` with your repository name
 
+Use your username and project url to access your repository.
+
+Use your personal access token as password for remote access. Please note, do not use your github password for accessing your repository - it will not work!
+
+![](/images/github_use_credentials.png)
 
 ## Important Notes
 
