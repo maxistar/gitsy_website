@@ -6,6 +6,21 @@ title: About Application
 
 ### Getting Started
 
+
+![](/images/gitsy_context_menu.jpg)
+
+![](/images/gitsy_create_folder.jpg)
+
+![](/images/gitsy_credentials.jpg)
+
+![](/images/gitsy_delete_project.jpg)
+
+![](/images/gitsy_options_menu.jpg)
+
+![](/images/gitsy_projects_list.jpg)
+
+![](/images/gitsy_use_folder.jpg)
+
 - Install the program
 - Create a new project
 - Enter username and password
