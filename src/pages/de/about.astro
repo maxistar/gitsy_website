@@ -1,0 +1,241 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Über GitSy - Git-basierte Notizsynchronisation" description="Erfahre mehr über GitSy, die Android-App, die Git-Repositories nutzt, um deine Notizen sicher und effizient auf allen Geräten zu synchronisieren.">
+  <Header />
+  
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Über GitSy</h1>
+        <p class="lead">Die Geschichte hinter der Git-basierten Notizsynchronisation</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <div class="content-grid">
+          <div class="main-content">
+            <h2>Unsere Mission</h2>
+            <p>
+              GitSy wurde entwickelt, um ein grundlegendes Problem zu lösen: Wie kann man Notizen 
+              über mehrere Geräte hinweg synchronisieren und dabei die vollständige Kontrolle über 
+              seine Daten behalten. Herkömmliche Notiz-Apps sperren deine Daten in proprietäre Systeme 
+              ein, aber GitSy nutzt die Macht von Git, um dir Freiheit und Kontrolle zu geben.
+            </p>
+
+            <h2>Warum Git für Notizen?</h2>
+            <p>
+              Git ist das vertrauenswürdigste Versionskontrollsystem der Welt, das von Millionen 
+              von Entwicklern zur Verwaltung von Code verwendet wird. Wir erkannten, dass dieselben 
+              Prinzipien, die Git perfekt für Code machen, es auch ideal für Notizen machen:
+            </p>
+            
+            <ul class="feature-list">
+              <li><strong>Versionsverlauf:</strong> Jede Änderung an deinen Notizen wird verfolgt und ist wiederherstellbar</li>
+              <li><strong>Verteilt:</strong> Deine Notizen existieren auf allen deinen Geräten, nicht nur in der Cloud</li>
+              <li><strong>Konfliktlösung:</strong> Intelligentes Zusammenführen behandelt gleichzeitige Bearbeitungen</li>
+              <li><strong>Eigentum:</strong> Deine Daten bleiben in Repositories, die du kontrollierst</li>
+            </ul>
+
+            <h2>Die Technologie</h2>
+            <p>
+              GitSy ist als native Android-Anwendung entwickelt, die Git-Protokolle direkt 
+              implementiert. Das bedeutet, dass deine Notizen als einfache Textdateien in deinem 
+              Git-Repository gespeichert werden, wodurch sie von jedem Gerät mit Git zugänglich 
+              sind, nicht nur über unsere App.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Offenes Format</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Vendor Lock-in</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Backup-Kopien</div>
+              </div>
+            </div>
+
+            <h2>Datenschutz & Sicherheit</h2>
+            <p>
+              Deine Privatsphäre steht an erster Stelle. GitSy speichert deine Notizen nicht 
+              auf unseren Servern - sie leben in deinem Git-Repository. Ob du GitHub, GitLab 
+              oder deinen eigenen Git-Server verwendest, du behältst die vollständige Kontrolle 
+              darüber, wer Zugang zu deinen Daten hat.
+            </p>
+
+            <h2>Zukunftsvision</h2>
+            <p>
+              Wir stellen uns eine Welt vor, in der deine digitalen Notizen genauso dauerhaft 
+              und portabel sind wie physische Notizbücher. Durch den Aufbau auf Gits Fundament 
+              stellt GitSy sicher, dass deine Notizen auch in Jahrzehnten noch zugänglich 
+              sind, unabhängig davon, ob unsere App noch existiert.
+            </p>
+          </div>
+
+          <div class="sidebar">
+            <div class="info-card">
+              <h3>Schnelle Fakten</h3>
+              <ul class="facts-list">
+                <li>📱 Native Android-App</li>
+                <li>🔓 Open-Source-kompatibel</li>
+                <li>🌐 Funktioniert mit jedem Git-Hosting</li>
+                <li>📝 Markdown-Unterstützung</li>
+                <li>🔄 Echtzeit-Synchronisation</li>
+                <li>🔒 Ende-zu-Ende-Verschlüsselung</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>Unterstützte Plattformen</h3>
+              <ul class="platforms-list">
+                <li>✅ GitHub</li>
+                <li>✅ GitLab</li>
+                <li>✅ Bitbucket</li>
+                <li>✅ Selbst gehostetes Git</li>
+                <li>✅ Gitea</li>
+                <li>✅ Azure DevOps</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    padding: 3rem 0;
+    background: #f8fafc;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  .content {
+    padding: 4rem 0;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+
+  .main-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .feature-list {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .feature-list li {
+    margin-bottom: 0.75rem;
+    color: #374151;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 1rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-card h3 {
+    margin-bottom: 1.5rem;
+    color: #111827;
+  }
+
+  .facts-list,
+  .platforms-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .facts-list li,
+  .platforms-list li {
+    padding: 0.5rem 0;
+    color: #374151;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .facts-list li:last-child,
+  .platforms-list li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 768px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
+</style>

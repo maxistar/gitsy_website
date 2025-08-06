@@ -1,0 +1,441 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Связаться с GitSy - Поддержка и обратная связь" description="Свяжитесь с командой GitSy для получения поддержки, запросов функций или общих вопросов о приложении синхронизации заметок на основе Git.">
+  <Header />
+  
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Связаться с нами</h1>
+        <p class="lead">Мы будем рады услышать от вас</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <h2>Свяжитесь с нами</h2>
+            <p>
+              Нужна ли вам поддержка, есть ли запрос функции или вы просто хотите поделиться 
+              отзывом о GitSy, мы здесь, чтобы помочь. Выберите лучший способ связаться с нами:
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">📧</div>
+                <div class="method-content">
+                  <h3>Поддержка по email</h3>
+                  <p>Для технической поддержки и общих вопросов</p>
+                  <a href="mailto:support@gitsy.app" class="contact-link">support@gitsy.app</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">🐛</div>
+                <div class="method-content">
+                  <h3>Сообщения об ошибках</h3>
+                  <p>Нашли ошибку? Сообщите о ней на нашей странице GitHub issues</p>
+                  <a href="https://github.com/gitnotes/issues" class="contact-link">GitHub Issues</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">💡</div>
+                <div class="method-content">
+                  <h3>Запросы функций</h3>
+                  <p>Есть идея для улучшения GitSy?</p>
+                  <a href="mailto:features@gitsy.app" class="contact-link">features@gitsy.app</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">💬</div>
+                <div class="method-content">
+                  <h3>Обсуждение в сообществе</h3>
+                  <p>Присоединяйтесь к обсуждениям с другими пользователями</p>
+                  <a href="https://discord.gg/gitsy" class="contact-link">Discord сообщество</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="response-times">
+              <h3>Время ответа</h3>
+              <ul>
+                <li><strong>Запросы поддержки:</strong> В течение 24 часов</li>
+                <li><strong>Сообщения об ошибках:</strong> В течение 48 часов</li>
+                <li><strong>Запросы функций:</strong> В течение 1 недели</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <div class="contact-form">
+              <h2>Отправьте нам сообщение</h2>
+              <p>Заполните форму ниже, и мы свяжемся с вами как можно скорее.</p>
+
+              <form class="form">
+                <div class="form-group">
+                  <label for="name">Имя</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Тема</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Выберите тему</option>
+                    <option value="support">Техническая поддержка</option>
+                    <option value="bug">Сообщение об ошибке</option>
+                    <option value="feature">Запрос функции</option>
+                    <option value="feedback">Общий отзыв</option>
+                    <option value="other">Другое</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Сообщение</label>
+                  <textarea id="message" name="message" rows="6" required placeholder="Пожалуйста, подробно опишите ваш вопрос или проблему..."></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="device-info">Информация об устройстве (Необязательно)</label>
+                  <input type="text" id="device-info" name="device-info" placeholder="например, Samsung Galaxy S21, Android 12">
+                  <small>Это помогает нам предоставить лучшую техническую поддержку</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Отправить сообщение</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <h2>Часто задаваемые вопросы</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>Бесплатен ли GitSy?</h3>
+              <p>
+                Да, GitSy полностью бесплатен для скачивания и использования. Вам нужен только 
+                Git-репозиторий для хранения заметок, который можно получить бесплатно от GitHub, 
+                GitLab или других провайдеров.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Какие Git-хостинги поддерживаются?</h3>
+              <p>
+                GitSy работает с любым Git-хостингом, включая GitHub, GitLab, Bitbucket, 
+                Azure DevOps и собственные Git-серверы.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Могу ли я использовать GitSy офлайн?</h3>
+              <p>
+                Да, вы можете создавать и редактировать заметки офлайн. Ваши изменения будут 
+                синхронизированы автоматически при восстановлении интернет-соединения.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Безопасны ли мои данные?</h3>
+              <p>
+                Ваши заметки хранятся в вашем собственном Git-репозитории, что дает вам полный 
+                контроль над данными. GitSy не хранит никакого вашего контента на наших серверах.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Могу ли я экспортировать заметки?</h3>
+              <p>
+                Да, вы можете экспортировать отдельные заметки или все заметки в любое время. 
+                Ваши заметки хранятся как стандартные Markdown-файлы в вашем Git-репозитории.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Как создать резервную копию заметок?</h3>
+              <p>
+                Ваши заметки автоматически резервируются в ваш Git-репозиторий с полной историей 
+                версий. Вы также можете клонировать репозиторий в несколько мест для дополнительных резервных копий.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    padding: 3rem 0;
+    background: #f8fafc;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  .contact-section {
+    padding: 4rem 0;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .contact-info h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-info > p {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .method-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .method-content h3 {
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+
+  .method-content p {
+    margin-bottom: 0.75rem;
+    color: #6b7280;
+  }
+
+  .contact-link {
+    color: #2563eb;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+
+  .response-times {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .response-times h3 {
+    margin-bottom: 1rem;
+    color: #111827;
+  }
+
+  .response-times ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .response-times li {
+    padding: 0.5rem 0;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .response-times li:last-child {
+    border-bottom: none;
+  }
+
+  .contact-form-container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .contact-form {
+    padding: 3rem;
+  }
+
+  .contact-form h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-form > p {
+    margin-bottom: 2rem;
+    color: #6b7280;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .form-group small {
+    margin-top: 0.5rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .faq-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 4rem;
+  }
+
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-item h3 {
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  .faq-item p {
+    color: #6b7280;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-form {
+      padding: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-methods {
+      gap: 1.5rem;
+    }
+
+    .contact-method {
+      padding: 1rem;
+    }
+
+    .method-icon {
+      font-size: 1.5rem;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-item {
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.form');
+    
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      // Simple validation
+      if (!data.name || !data.email || !data.subject || !data.message) {
+        alert('Пожалуйста, заполните все обязательные поля.');
+        return;
+      }
+      
+      // In a real application, you would send this data to your server
+      alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+      form.reset();
+    });
+  });
+</script>

@@ -1,0 +1,238 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About GitSy - Git-based Note Synchronization" description="Learn about GitSy, the Android app that uses Git repositories to sync your notes across all devices securely and efficiently.">
+  <Header />
+  
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>About GitSy</h1>
+        <p class="lead">The story behind Git-based note synchronization</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container">
+        <div class="content-grid">
+          <div class="main-content">
+            <h2>Our Mission</h2>
+            <p>
+              GitSy was created to solve a fundamental problem: how to keep your notes synchronized 
+              across multiple devices while maintaining complete control over your data. Traditional 
+              note-taking apps lock your data into proprietary systems, but GitSy leverages the power 
+              of Git to give you freedom and control.
+            </p>
+
+            <h2>Why Git for Notes?</h2>
+            <p>
+              Git is the world's most trusted version control system, used by millions of developers 
+              to manage code. We realized that the same principles that make Git perfect for code 
+              make it ideal for notes:
+            </p>
+            
+            <ul class="feature-list">
+              <li><strong>Version History:</strong> Every change to your notes is tracked and recoverable</li>
+              <li><strong>Distributed:</strong> Your notes exist on all your devices, not just in the cloud</li>
+              <li><strong>Conflict Resolution:</strong> Smart merging handles simultaneous edits</li>
+              <li><strong>Ownership:</strong> Your data stays in repositories you control</li>
+            </ul>
+
+            <h2>The Technology</h2>
+            <p>
+              GitSy is built as a native Android application that implements Git protocols directly. 
+              This means your notes are stored as plain text files in your Git repository, making them 
+              accessible from any device with Git, not just through our app.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Open Format</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Vendor Lock-in</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Backup Copies</div>
+              </div>
+            </div>
+
+            <h2>Privacy & Security</h2>
+            <p>
+              Your privacy is paramount. GitSy doesn't store your notes on our servers - they live 
+              in your Git repository. Whether you use GitHub, GitLab, or your own Git server, you 
+              maintain complete control over who has access to your data.
+            </p>
+
+            <h2>Future Vision</h2>
+            <p>
+              We envision a world where your digital notes are as permanent and portable as physical 
+              notebooks. By building on Git's foundation, GitSy ensures that your notes will be 
+              accessible decades from now, regardless of whether our app still exists.
+            </p>
+          </div>
+
+          <div class="sidebar">
+            <div class="info-card">
+              <h3>Quick Facts</h3>
+              <ul class="facts-list">
+                <li>📱 Native Android app</li>
+                <li>🔓 Open source compatible</li>
+                <li>🌐 Works with any Git hosting</li>
+                <li>📝 Markdown support</li>
+                <li>🔄 Real-time sync</li>
+                <li>🔒 End-to-end encryption</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>Supported Platforms</h3>
+              <ul class="platforms-list">
+                <li>✅ GitHub</li>
+                <li>✅ GitLab</li>
+                <li>✅ Bitbucket</li>
+                <li>✅ Self-hosted Git</li>
+                <li>✅ Gitea</li>
+                <li>✅ Azure DevOps</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    padding: 3rem 0;
+    background: #f8fafc;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  .content {
+    padding: 4rem 0;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+
+  .main-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .feature-list {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .feature-list li {
+    margin-bottom: 0.75rem;
+    color: #374151;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 1rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2563eb;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-card h3 {
+    margin-bottom: 1.5rem;
+    color: #111827;
+  }
+
+  .facts-list,
+  .platforms-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .facts-list li,
+  .platforms-list li {
+    padding: 0.5rem 0;
+    color: #374151;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .facts-list li:last-child,
+  .platforms-list li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 768px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
+</style>

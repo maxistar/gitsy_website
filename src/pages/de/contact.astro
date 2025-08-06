@@ -1,0 +1,442 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="GitSy kontaktieren - Support & Feedback" description="Kontaktiere das GitSy-Team für Support, Feature-Anfragen oder allgemeine Fragen zur Git-basierten Notizsynchronisations-App.">
+  <Header />
+  
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Kontaktiere uns</h1>
+        <p class="lead">Wir würden gerne von dir hören</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <h2>Kontakt aufnehmen</h2>
+            <p>
+              Ob du Support benötigst, eine Feature-Anfrage hast oder einfach dein 
+              Feedback zu GitSy teilen möchtest, wir sind hier, um zu helfen. 
+              Wähle den besten Weg, uns zu erreichen:
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">📧</div>
+                <div class="method-content">
+                  <h3>E-Mail-Support</h3>
+                  <p>Für technischen Support und allgemeine Anfragen</p>
+                  <a href="mailto:support@gitsy.app" class="contact-link">support@gitsy.app</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">🐛</div>
+                <div class="method-content">
+                  <h3>Fehlerberichte</h3>
+                  <p>Einen Fehler gefunden? Melde ihn auf unserer GitHub Issues-Seite</p>
+                  <a href="https://github.com/gitnotes/issues" class="contact-link">GitHub Issues</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">💡</div>
+                <div class="method-content">
+                  <h3>Feature-Anfragen</h3>
+                  <p>Hast du eine Idee zur Verbesserung von GitSy?</p>
+                  <a href="mailto:features@gitsy.app" class="contact-link">features@gitsy.app</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">💬</div>
+                <div class="method-content">
+                  <h3>Community-Diskussion</h3>
+                  <p>Tritt Diskussionen mit anderen Benutzern bei</p>
+                  <a href="https://discord.gg/gitsy" class="contact-link">Discord Community</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="response-times">
+              <h3>Antwortzeiten</h3>
+              <ul>
+                <li><strong>Support-Anfragen:</strong> Innerhalb von 24 Stunden</li>
+                <li><strong>Fehlerberichte:</strong> Innerhalb von 48 Stunden</li>
+                <li><strong>Feature-Anfragen:</strong> Innerhalb von 1 Woche</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <div class="contact-form">
+              <h2>Sende uns eine Nachricht</h2>
+              <p>Fülle das untenstehende Formular aus und wir melden uns so schnell wie möglich bei dir.</p>
+
+              <form class="form">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">E-Mail</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Betreff</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Betreff auswählen</option>
+                    <option value="support">Technischer Support</option>
+                    <option value="bug">Fehlerbericht</option>
+                    <option value="feature">Feature-Anfrage</option>
+                    <option value="feedback">Allgemeines Feedback</option>
+                    <option value="other">Sonstiges</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Nachricht</label>
+                  <textarea id="message" name="message" rows="6" required placeholder="Bitte beschreibe deine Frage oder dein Problem detailliert..."></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="device-info">Geräteinformationen (Optional)</label>
+                  <input type="text" id="device-info" name="device-info" placeholder="z.B. Samsung Galaxy S21, Android 12">
+                  <small>Dies hilft uns, besseren technischen Support zu bieten</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Nachricht senden</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <h2>Häufig gestellte Fragen</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>Ist GitSy kostenlos?</h3>
+              <p>
+                Ja, GitSy ist vollständig kostenlos zum Herunterladen und Verwenden. Du benötigst nur 
+                ein Git-Repository zur Speicherung deiner Notizen, das du kostenlos von GitHub, 
+                GitLab oder anderen Anbietern erhalten kannst.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Welche Git-Hosting-Services werden unterstützt?</h3>
+              <p>
+                GitSy funktioniert mit jedem Git-Hosting-Service, einschließlich GitHub, GitLab, 
+                Bitbucket, Azure DevOps und selbst gehosteten Git-Servern.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Kann ich GitSy offline verwenden?</h3>
+              <p>
+                Ja, du kannst Notizen offline erstellen und bearbeiten. Deine Änderungen werden 
+                automatisch synchronisiert, wenn du wieder mit dem Internet verbunden bist.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Sind meine Daten sicher?</h3>
+              <p>
+                Deine Notizen werden in deinem eigenen Git-Repository gespeichert, was dir vollständige 
+                Kontrolle über deine Daten gibt. GitSy speichert keine deiner Inhalte auf unseren Servern.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Kann ich meine Notizen exportieren?</h3>
+              <p>
+                Ja, du kannst einzelne Notizen oder alle deine Notizen jederzeit exportieren. 
+                Deine Notizen werden als Standard-Markdown-Dateien in deinem Git-Repository gespeichert.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Wie sichere ich meine Notizen?</h3>
+              <p>
+                Deine Notizen werden automatisch in deinem Git-Repository mit vollständiger Versionsgeschichte 
+                gesichert. Du kannst auch dein Repository an mehrere Orte klonen für zusätzliche Backups.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    padding: 3rem 0;
+    background: #f8fafc;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  .contact-section {
+    padding: 4rem 0;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .contact-info h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-info > p {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+  }
+
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .method-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .method-content h3 {
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+
+  .method-content p {
+    margin-bottom: 0.75rem;
+    color: #6b7280;
+  }
+
+  .contact-link {
+    color: #2563eb;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+
+  .response-times {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .response-times h3 {
+    margin-bottom: 1rem;
+    color: #111827;
+  }
+
+  .response-times ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .response-times li {
+    padding: 0.5rem 0;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .response-times li:last-child {
+    border-bottom: none;
+  }
+
+  .contact-form-container {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .contact-form {
+    padding: 3rem;
+  }
+
+  .contact-form h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-form > p {
+    margin-bottom: 2rem;
+    color: #6b7280;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .form-group small {
+    margin-top: 0.5rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .faq-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 4rem;
+  }
+
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-item h3 {
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  .faq-item p {
+    color: #6b7280;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-form {
+      padding: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-methods {
+      gap: 1.5rem;
+    }
+
+    .contact-method {
+      padding: 1rem;
+    }
+
+    .method-icon {
+      font-size: 1.5rem;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-item {
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.form');
+    
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      // Simple validation
+      if (!data.name || !data.email || !data.subject || !data.message) {
+        alert('Bitte fülle alle erforderlichen Felder aus.');
+        return;
+      }
+      
+      // In a real application, you would send this data to your server
+      alert('Vielen Dank für deine Nachricht! Wir melden uns bald bei dir.');
+      form.reset();
+    });
+  });
+</script>

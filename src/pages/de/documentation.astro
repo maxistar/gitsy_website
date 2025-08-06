@@ -1,0 +1,660 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="GitSy Dokumentation - Benutzerhandbuch" description="Vollständige Dokumentation und Benutzerhandbuch für GitSy, die Git-basierte Notizsynchronisations-App für Android.">
+  <Header />
+  
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Dokumentation</h1>
+        <p class="lead">Alles was du über die Verwendung von GitSy wissen musst</p>
+      </div>
+    </section>
+
+    <section class="documentation">
+      <div class="container">
+        <div class="docs-layout">
+          <nav class="docs-nav">
+            <div class="nav-section">
+              <h3>Erste Schritte</h3>
+              <ul>
+                <li><a href="#installation" class="nav-link">Installation</a></li>
+                <li><a href="#setup" class="nav-link">Ersteinrichtung</a></li>
+                <li><a href="#first-note" class="nav-link">Erste Notiz erstellen</a></li>
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <h3>Konfiguration</h3>
+              <ul>
+                <li><a href="#repositories" class="nav-link">Repository-Einrichtung</a></li>
+                <li><a href="#authentication" class="nav-link">Authentifizierung</a></li>
+                <li><a href="#sync-settings" class="nav-link">Synchronisationseinstellungen</a></li>
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <h3>Funktionen</h3>
+              <ul>
+                <li><a href="#note-management" class="nav-link">Notizverwaltung</a></li>
+                <li><a href="#markdown" class="nav-link">Markdown-Unterstützung</a></li>
+                <li><a href="#search" class="nav-link">Suche & Organisation</a></li>
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <h3>Erweitert</h3>
+              <ul>
+                <li><a href="#conflict-resolution" class="nav-link">Konfliktlösung</a></li>
+                <li><a href="#backup" class="nav-link">Backup & Wiederherstellung</a></li>
+                <li><a href="#troubleshooting" class="nav-link">Fehlerbehebung</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="docs-content">
+            <section id="installation" class="doc-section">
+              <h2>Installation</h2>
+              <p>
+                GitSy ist für Android-Geräte mit Android 7.0 oder neuer verfügbar. 
+                Du kannst es aus dem Google Play Store installieren oder die APK direkt herunterladen.
+              </p>
+              
+              <h3>Systemanforderungen</h3>
+              <ul>
+                <li>Android 7.0+ (API-Level 24)</li>
+                <li>64MB freier Speicherplatz</li>
+                <li>Internetverbindung für Synchronisation</li>
+                <li>Zugang zu einem Git-Repository (GitHub, GitLab, etc.)</li>
+              </ul>
+              
+              <div class="code-block">
+                <h4>Erforderliche Berechtigungen</h4>
+                <ul>
+                  <li><strong>Internet:</strong> Für Git-Synchronisation</li>
+                  <li><strong>Speicher:</strong> Für lokale Notizspeicherung</li>
+                  <li><strong>Netzwerkstatus:</strong> Zur Erkennung der Konnektivität</li>
+                </ul>
+              </div>
+            </section>
+
+            <section id="setup" class="doc-section">
+              <h2>Ersteinrichtung</h2>
+              <p>
+                Nach der Installation von GitSy musst du es mit deinem Git-Repository verbinden. 
+                Dies ist ein einmaliger Prozess, der die Synchronisation auf allen deinen Geräten ermöglicht.
+              </p>
+              
+              <h3>Schritt 1: Repository erstellen</h3>
+              <p>
+                Erstelle zunächst ein neues Repository bei deinem bevorzugten Git-Hosting-Service:
+              </p>
+              <ul>
+                <li><strong>GitHub:</strong> Gehe zu github.com und erstelle ein neues Repository</li>
+                <li><strong>GitLab:</strong> Besuche gitlab.com und erstelle ein neues Projekt</li>
+                <li><strong>Selbst gehostet:</strong> Verwende deinen eigenen Git-Server</li>
+              </ul>
+              
+              <div class="tip-box">
+                <h4>💡 Tipp</h4>
+                <p>Mache dein Repository privat, um deine Notizen sicher zu halten. GitNotes funktioniert sowohl mit öffentlichen als auch privaten Repositories.</p>
+              </div>
+              
+              <h3>Schritt 2: GitSy konfigurieren</h3>
+              <p>Öffne GitSy und folge diesen Schritten:</p>
+              <ol>
+                <li>Tippe auf "Repository hinzufügen" im Willkommensbildschirm</li>
+                <li>Gib deine Repository-URL ein</li>
+                <li>Stelle deine Authentifizierungsdaten bereit</li>
+                <li>Wähle einen lokalen Ordnernamen</li>
+                <li>Tippe auf "Verbinden", um die Verbindung herzustellen</li>
+              </ol>
+            </section>
+
+            <section id="first-note" class="doc-section">
+              <h2>Erste Notiz erstellen</h2>
+              <p>
+                Sobald dein Repository verbunden ist, kannst du sofort mit der Erstellung von Notizen beginnen. 
+                GitSy verwendet eine einfache Benutzeroberfläche, die sich auf deinen Inhalt konzentriert.
+              </p>
+              
+              <h3>Grundlagen der Notizerstellung</h3>
+              <ol>
+                <li>Tippe auf die "+"-Schaltfläche, um eine neue Notiz zu erstellen</li>
+                <li>Gib einen Titel für deine Notiz ein</li>
+                <li>Beginne mit der Eingabe deines Inhalts</li>
+                <li>GitSy speichert deine Änderungen automatisch</li>
+                <li>Die Synchronisation erfolgt automatisch im Hintergrund</li>
+              </ol>
+              
+              <div class="warning-box">
+                <h4>⚠️ Wichtig</h4>
+                <p>Deine erste Synchronisation kann einige Momente dauern, da GitSy die anfängliche Repository-Struktur einrichtet.</p>
+              </div>
+            </section>
+
+            <section id="repositories" class="doc-section">
+              <h2>Repository-Einrichtung</h2>
+              <p>
+                GitNotes unterstützt verschiedene Git-Hosting-Services und Konfigurationen. 
+                Hier erfährst du, wie du Repositories für verschiedene Anbieter einrichtest.
+              </p>
+              
+              <h3>GitHub</h3>
+              <div class="code-block">
+                <p><strong>Repository-URL-Format:</strong></p>
+                <code>https://github.com/benutzername/repository-name.git</code>
+              </div>
+              
+              <h3>GitLab</h3>
+              <div class="code-block">
+                <p><strong>Repository-URL-Format:</strong></p>
+                <code>https://gitlab.com/benutzername/repository-name.git</code>
+              </div>
+              
+              <h3>Selbst gehostetes Git</h3>
+              <div class="code-block">
+                <p><strong>Repository-URL-Format:</strong></p>
+                <code>https://dein-git-server.com/benutzername/repository-name.git</code>
+              </div>
+            </section>
+
+            <section id="authentication" class="doc-section">
+              <h2>Authentifizierung</h2>
+              <p>
+                Sichere Authentifizierung ist für den Zugriff auf dein Git-Repository unerlässlich. 
+                GitNotes unterstützt mehrere Authentifizierungsmethoden.
+              </p>
+              
+              <h3>Personal Access Token (Empfohlen)</h3>
+              <p>Die sicherste Methode ist die Verwendung eines Personal Access Tokens:</p>
+              <ol>
+                <li>Gehe zu den Einstellungen deines Git-Anbieters</li>
+                <li>Generiere einen neuen Personal Access Token</li>
+                <li>Gewähre Repository-Lese-/Schreibberechtigungen</li>
+                <li>Kopiere den Token und füge ihn in GitNotes ein</li>
+              </ol>
+              
+              <h3>Benutzername/Passwort</h3>
+              <p>
+                Du kannst auch deinen regulären Benutzernamen und dein Passwort verwenden, aber diese Methode 
+                ist weniger sicher und funktioniert möglicherweise nicht bei allen Anbietern.
+              </p>
+              
+              <div class="tip-box">
+                <h4>🔒 Sicherheitstipp</h4>
+                <p>Verwende immer Personal Access Tokens anstelle von Passwörtern. Sie sind sicherer und können bei Bedarf einfach widerrufen werden.</p>
+              </div>
+            </section>
+
+            <section id="sync-settings" class="doc-section">
+              <h2>Synchronisationseinstellungen</h2>
+              <p>
+                GitNotes bietet flexible Synchronisationsoptionen, um ein Gleichgewicht zwischen 
+                Echtzeit-Updates und Akkulaufzeit zu schaffen.
+              </p>
+              
+              <h3>Synchronisationsmodi</h3>
+              <ul>
+                <li><strong>Automatisch:</strong> Synchronisiert bei jeder Änderung</li>
+                <li><strong>Manuell:</strong> Synchronisiert nur, wenn du die Sync-Schaltfläche tippst</li>
+                <li><strong>Geplant:</strong> Synchronisiert in regelmäßigen Abständen</li>
+              </ul>
+              
+              <h3>Synchronisationshäufigkeit</h3>
+              <p>Bei der Verwendung der geplanten Synchronisation kannst du wählen aus:</p>
+              <ul>
+                <li>Alle 5 Minuten</li>
+                <li>Alle 15 Minuten</li>
+                <li>Jede Stunde</li>
+                <li>Alle 6 Stunden</li>
+                <li>Täglich</li>
+              </ul>
+            </section>
+
+            <section id="note-management" class="doc-section">
+              <h2>Notizverwaltung</h2>
+              <p>
+                GitNotes bietet leistungsstarke Tools zur Organisation und Verwaltung deiner Notizen, 
+                während die Benutzeroberfläche sauber und einfach bleibt.
+              </p>
+              
+              <h3>Notizorganisation</h3>
+              <ul>
+                <li><strong>Ordner:</strong> Organisiere Notizen in Ordnern und Unterordnern</li>
+                <li><strong>Tags:</strong> Füge Tags zu Notizen für einfache Kategorisierung hinzu</li>
+                <li><strong>Favoriten:</strong> Markiere wichtige Notizen als Favoriten</li>
+                <li><strong>Kürzlich:</strong> Schneller Zugriff auf kürzlich geänderte Notizen</li>
+              </ul>
+              
+              <h3>Notizaktionen</h3>
+              <ul>
+                <li>Notizen erstellen, bearbeiten und löschen</li>
+                <li>Notizen für Vorlagen duplizieren</li>
+                <li>Notizen als Text oder Markdown teilen</li>
+                <li>Notizen in andere Apps exportieren</li>
+              </ul>
+            </section>
+
+            <section id="markdown" class="doc-section">
+              <h2>Markdown-Unterstützung</h2>
+              <p>
+                GitNotes unterstützt vollständig Markdown-Formatierung, wodurch es einfach ist, 
+                reichhaltige, formatierte Notizen zu erstellen, die auf jedem Gerät großartig aussehen.
+              </p>
+              
+              <h3>Unterstützte Markdown-Funktionen</h3>
+              <div class="code-block">
+                <h4>Überschriften</h4>
+                <code># H1<br>## H2<br>### H3</code>
+              </div>
+              
+              <div class="code-block">
+                <h4>Textformatierung</h4>
+                <code>**Fetter Text**<br>*Kursiver Text*<br>~~Durchgestrichener Text~~</code>
+              </div>
+              
+              <div class="code-block">
+                <h4>Listen</h4>
+                <code>- Ungeordnete Liste<br>1. Geordnete Liste<br>- [ ] Aufgabenliste</code>
+              </div>
+              
+              <div class="code-block">
+                <h4>Links und Bilder</h4>
+                <code>[Link-Text](URL)<br>![Alt-Text](bild-url)</code>
+              </div>
+            </section>
+
+            <section id="search" class="doc-section">
+              <h2>Suche & Organisation</h2>
+              <p>
+                Finde jede Notiz schnell mit GitNotes' leistungsstarken Suchfunktionen 
+                und Organisationsfeatures.
+              </p>
+              
+              <h3>Suchfunktionen</h3>
+              <ul>
+                <li><strong>Volltext-Suche:</strong> Suche innerhalb des Notizinhalts</li>
+                <li><strong>Titel-Suche:</strong> Finde Notizen nach Titel</li>
+                <li><strong>Tag-Suche:</strong> Filtere nach Tags</li>
+                <li><strong>Datumsfilter:</strong> Finde Notizen nach Erstellungs- oder Änderungsdatum</li>
+              </ul>
+              
+              <h3>Sortieroptionen</h3>
+              <ul>
+                <li>Nach Änderungsdatum (neueste zuerst)</li>
+                <li>Nach Erstellungsdatum</li>
+                <li>Alphabetisch nach Titel</li>
+                <li>Nach Größe</li>
+              </ul>
+            </section>
+
+            <section id="conflict-resolution" class="doc-section">
+              <h2>Konfliktlösung</h2>
+              <p>
+                Wenn dieselbe Notiz gleichzeitig auf mehreren Geräten bearbeitet wird, 
+                verwendet GitNotes Gits Konfliktlösungssystem, um Konflikte elegant zu behandeln.
+              </p>
+              
+              <h3>Wie Konflikte entstehen</h3>
+              <p>
+                Konflikte treten auf, wenn:
+              </p>
+              <ul>
+                <li>Dieselbe Notiz auf mehreren Geräten bearbeitet wird</li>
+                <li>Änderungen offline vorgenommen werden</li>
+                <li>Netzwerkprobleme eine ordnungsgemäße Synchronisation verhindern</li>
+              </ul>
+              
+              <h3>Konfliktlösungsprozess</h3>
+              <ol>
+                <li>GitNotes erkennt den Konflikt während der Synchronisation</li>
+                <li>Dir werden beide Versionen der Notiz präsentiert</li>
+                <li>Wähle, welche Version behalten oder manuell zusammengeführt werden soll</li>
+                <li>Die gelöste Notiz wird gespeichert und synchronisiert</li>
+              </ol>
+              
+              <div class="tip-box">
+                <h4>💡 Best Practice</h4>
+                <p>Um Konflikte zu minimieren, versuche die Bearbeitung einer Notiz abzuschließen, bevor du zu einem anderen Gerät wechselst.</p>
+              </div>
+            </section>
+
+            <section id="backup" class="doc-section">
+              <h2>Backup & Wiederherstellung</h2>
+              <p>
+                Deine Notizen werden automatisch in deinem Git-Repository gesichert, 
+                aber GitNotes bietet auch zusätzliche Backup-Optionen für extra Sicherheit.
+              </p>
+              
+              <h3>Automatisches Git-Backup</h3>
+              <p>
+                Jedes Mal, wenn du synchronisierst, werden deine Notizen in deinem Git-Repository gesichert. 
+                Das bedeutet, du hast:
+              </p>
+              <ul>
+                <li>Vollständige Versionsgeschichte aller Änderungen</li>
+                <li>Mehrere Kopien auf allen verbundenen Geräten</li>
+                <li>Wiederherstellung von jedem Zeitpunkt</li>
+              </ul>
+              
+              <h3>Manueller Export</h3>
+              <p>
+                Du kannst deine Notizen auch manuell exportieren:
+              </p>
+              <ul>
+                <li>Alle Notizen als ZIP-Datei exportieren</li>
+                <li>Einzelne Notizen als Markdown-Dateien exportieren</li>
+                <li>Notizen per E-Mail oder andere Apps teilen</li>
+              </ul>
+            </section>
+
+            <section id="troubleshooting" class="doc-section">
+              <h2>Fehlerbehebung</h2>
+              <p>
+                Häufige Probleme und ihre Lösungen, um das Beste aus GitNotes herauszuholen.
+              </p>
+              
+              <h3>Synchronisationsprobleme</h3>
+              <div class="troubleshoot-item">
+                <h4>Problem: Notizen synchronisieren nicht</h4>
+                <p><strong>Lösungen:</strong></p>
+                <ul>
+                  <li>Überprüfe deine Internetverbindung</li>
+                  <li>Verifiziere Repository-Anmeldedaten</li>
+                  <li>Versuche manuelle Synchronisation</li>
+                  <li>Starte die App neu</li>
+                </ul>
+              </div>
+              
+              <div class="troubleshoot-item">
+                <h4>Problem: Authentifizierung fehlgeschlagen</h4>
+                <p><strong>Lösungen:</strong></p>
+                <ul>
+                  <li>Überprüfe, ob dein Token abgelaufen ist</li>
+                  <li>Verifiziere Token-Berechtigungen</li>
+                  <li>Versuche Anmeldedaten erneut einzugeben</li>
+                  <li>Überprüfe Repository-URL-Format</li>
+                </ul>
+              </div>
+              
+              <div class="troubleshoot-item">
+                <h4>Problem: App stürzt ab oder friert ein</h4>
+                <p><strong>Lösungen:</strong></p>
+                <ul>
+                  <li>Aktualisiere auf die neueste Version</li>
+                  <li>Lösche App-Cache</li>
+                  <li>Starte dein Gerät neu</li>
+                  <li>Überprüfe verfügbaren Speicherplatz</li>
+                </ul>
+              </div>
+              
+              <div class="help-box">
+                <h4>Brauchst du mehr Hilfe?</h4>
+                <p>
+                  Wenn du immer noch Probleme hast, besuche bitte unsere 
+                  <a href="/de/contact">Kontaktseite</a>, um dich mit unserem Support-Team in Verbindung zu setzen.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-hero {
+    padding: 3rem 0;
+    background: #f8fafc;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin: 0;
+  }
+
+  .documentation {
+    padding: 4rem 0;
+  }
+
+  .docs-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+  }
+
+  .docs-nav {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-section {
+    margin-bottom: 2rem;
+  }
+
+  .nav-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .nav-section h3 {
+    color: #111827;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav-section li {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-link {
+    color: #6b7280;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #2563eb;
+  }
+
+  .docs-content {
+    max-width: none;
+  }
+
+  .doc-section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 100px;
+  }
+
+  .doc-section h2 {
+    color: #111827;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  .doc-section h3 {
+    color: #374151;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .doc-section h3:first-of-type {
+    margin-top: 1rem;
+  }
+
+  .doc-section h4 {
+    color: #4b5563;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .doc-section ul,
+  .doc-section ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .doc-section li {
+    margin-bottom: 0.5rem;
+    color: #374151;
+  }
+
+  .code-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .code-block h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #374151;
+  }
+
+  .code-block code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #1f2937;
+  }
+
+  .tip-box,
+  .warning-box,
+  .help-box {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .tip-box {
+    background: #f0f9ff;
+    border-left: 4px solid #0ea5e9;
+  }
+
+  .warning-box {
+    background: #fffbeb;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .help-box {
+    background: #f0fdf4;
+    border-left: 4px solid #10b981;
+  }
+
+  .tip-box h4,
+  .warning-box h4,
+  .help-box h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .tip-box p,
+  .warning-box p,
+  .help-box p {
+    margin-bottom: 0;
+  }
+
+  .troubleshoot-item {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .troubleshoot-item h4 {
+    color: #dc2626;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .troubleshoot-item p {
+    margin-bottom: 0.5rem;
+  }
+
+  .troubleshoot-item ul {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .docs-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .docs-nav {
+      position: static;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    .nav-section {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .docs-nav {
+      grid-template-columns: 1fr;
+    }
+
+    .code-block {
+      padding: 1rem;
+    }
+
+    .code-block code {
+      font-size: 0.8rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  });
+</script>

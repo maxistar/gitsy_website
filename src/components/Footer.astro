@@ -1,17 +1,186 @@
 ---
-const platform = "github";
-const username = "withastro";
-import Social from './Social.astro';
+const currentPath = Astro.url.pathname;
+const isRussian = currentPath.startsWith('/ru');
+const isGerman = currentPath.startsWith('/de');
+
+const footerLinks = isRussian ? {
+  product: {
+    title: 'Продукт',
+    links: [
+      { href: '/ru/download', label: 'Скачать' },
+      { href: '/ru/documentation', label: 'Документация' },
+      { href: '/ru/about', label: 'О приложении' }
+    ]
+  },
+  support: {
+    title: 'Поддержка',
+    links: [
+      { href: '/ru/contact', label: 'Контакты' },
+      { href: '/ru/documentation', label: 'Центр помощи' },
+      { href: '/ru/privacy', label: 'Политика конфиденциальности' }
+    ]
+  },
+  copyright: '© 2025 GitNotes. Все права защищены.'
+} : isGerman ? {
+  product: {
+    title: 'Produkt',
+    links: [
+      { href: '/de/download', label: 'Herunterladen' },
+      { href: '/de/documentation', label: 'Dokumentation' },
+      { href: '/de/about', label: 'Über uns' }
+    ]
+  },
+  support: {
+    title: 'Support',
+    links: [
+      { href: '/de/contact', label: 'Kontakt' },
+      { href: '/de/documentation', label: 'Hilfe-Center' },
+      { href: '/de/privacy', label: 'Datenschutz' }
+    ]
+  },
+  copyright: '© 2025 GitNotes. Alle Rechte vorbehalten.'
+} : {
+  product: {
+    title: 'Product',
+    links: [
+      { href: '/download', label: 'Download' },
+      { href: '/documentation', label: 'Documentation' },
+      { href: '/about', label: 'About' }
+    ]
+  },
+  support: {
+    title: 'Support',
+    links: [
+      { href: '/contact', label: 'Contact' },
+      { href: '/documentation', label: 'Help Center' },
+      { href: '/privacy', label: 'Privacy Policy' }
+    ]
+  },
+  copyright: '© 2025 GitNotes. All rights reserved.'
+};
 ---
-<style>
-    footer {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-</style>
-<footer>
-    <Social platform="twitter" username="astrodotbuild" />
-    <Social platform="github" username="withastro" />
-    <Social platform="youtube" username="astrodotbuild" />
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>GitSy</h3>
+        <p>{isRussian ? 'Синхронизируйте заметки на устройствах с помощью Git-репозиториев, таких как GitHub и GitLab.' : isGerman ? 'Synchronisiere deine Notizen über Geräte hinweg mit Git-Repositories wie GitHub und GitLab.' : 'Sync your notes across devices using Git repositories like GitHub and GitLab.'}</p>
+        <div class="social-links">
+          <a href="https://github.com" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>{footerLinks.product.title}</h4>
+        <ul class="footer-links">
+          {footerLinks.product.links.map(link => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>{footerLinks.support.title}</h4>
+        <ul class="footer-links">
+          {footerLinks.support.links.map(link => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>{footerLinks.copyright.replace('GitNotes', 'GitSy')}</p>
+    </div>
+  </div>
 </footer>
+
+<style>
+  .footer {
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 4rem;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+  }
+
+  .footer-section h3 {
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section h4 {
+    color: #374151;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section p {
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-links a {
+    color: #6b7280;
+    transition: color 0.2s ease;
+  }
+
+  .social-links a:hover {
+    color: #2563eb;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-links a {
+    color: #6b7280;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: #2563eb;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #e5e7eb;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .footer-section p {
+      max-width: none;
+    }
+  }
+</style>
