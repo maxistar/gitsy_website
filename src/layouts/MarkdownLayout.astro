@@ -1,10 +1,19 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import Layout from './Layout.astro';
 
-const {frontmatter} = Astro.props;
+const { frontmatter } = Astro.props;
 ---
-<BaseLayout pageTitle={frontmatter.title}>
+<Layout title={frontmatter.title}>
 
-    <slot/>
+    <main>
+        <section class="privacy-content">
+            <div class="container">
+                <div class="content-wrapper">
+        <slot/>    
+                </div>
+            </div>
+        </section>
+    </main>
     
-</BaseLayout>
+    
+</Layout>

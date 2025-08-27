@@ -1,12 +1,23 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../layouts/Layout.astro';
 import BlogPost from '../components/BlogPost.astro';
 
 
 const allPosts = Object.values(import.meta.glob('./updates/*.md', { eager: true }));
 
 ---
-<BaseLayout pageName="Updates">
-	{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-</BaseLayout>
+<Layout title="Updates">
+    
+    <main>
+        <section class="privacy-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+                </div>
+            </div>
+        </section>
+    </main>
+    
+	
+</Layout>
 
