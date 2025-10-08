@@ -9,11 +9,18 @@ const { frontmatter } = Astro.props;
         <section class="privacy-content">
             <div class="container">
                 <div class="content-wrapper">
-        <slot/>    
+        <slot/>
                 </div>
             </div>
         </section>
     </main>
-    
-    
+
+
 </Layout>
+
+<style>
+    .privacy-content {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+</style>
