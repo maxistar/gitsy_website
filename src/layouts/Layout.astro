@@ -18,6 +18,13 @@ const { title, description = "Sync your notes across devices using Git repositor
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVND58MGSN"></script>
+    <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZVND58MGSN');
+    </script>
   </head>
   <body>
     <Header />
