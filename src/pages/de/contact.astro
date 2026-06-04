@@ -32,7 +32,7 @@ import Footer from '../../components/Footer.astro';
                 <div class="method-content">
                   <h3>E-Mail-Support</h3>
                   <p>Für technischen Support und allgemeine Anfragen</p>
-                  <a href="mailto:support@gitsy.app" class="contact-link">support@gitsy.app</a>
+	                  <a href="mailto:support@gitsy.de" class="contact-link">support@gitsy.de</a>
                 </div>
               </div>
 
@@ -41,7 +41,7 @@ import Footer from '../../components/Footer.astro';
                 <div class="method-content">
                   <h3>Fehlerberichte</h3>
                   <p>Einen Fehler gefunden? Melde ihn auf unserer GitHub Issues-Seite</p>
-                  <a href="https://github.com/gitnotes/issues" class="contact-link">GitHub Issues</a>
+	                  <a href="https://github.com/maxistar/gitsy_website/issues" class="contact-link">GitHub Issues</a>
                 </div>
               </div>
 
@@ -50,28 +50,20 @@ import Footer from '../../components/Footer.astro';
                 <div class="method-content">
                   <h3>Feature-Anfragen</h3>
                   <p>Hast du eine Idee zur Verbesserung von GitSy?</p>
-                  <a href="mailto:features@gitsy.app" class="contact-link">features@gitsy.app</a>
+	                  <a href="/de/roadmap" class="contact-link">Roadmap</a>
                 </div>
               </div>
 
-              <div class="contact-method">
-                <div class="method-icon">💬</div>
-                <div class="method-content">
-                  <h3>Community-Diskussion</h3>
-                  <p>Tritt Diskussionen mit anderen Benutzern bei</p>
-                  <a href="https://discord.gg/gitsy" class="contact-link">Discord Community</a>
-                </div>
-              </div>
-            </div>
+	            </div>
 
-            <div class="response-times">
-              <h3>Antwortzeiten</h3>
-              <ul>
-                <li><strong>Support-Anfragen:</strong> Innerhalb von 24 Stunden</li>
-                <li><strong>Fehlerberichte:</strong> Innerhalb von 48 Stunden</li>
-                <li><strong>Feature-Anfragen:</strong> Innerhalb von 1 Woche</li>
-              </ul>
-            </div>
+	            <div class="response-times">
+	              <h3>Hinweise</h3>
+	              <ul>
+	                <li><strong>Support:</strong> Antwortzeiten können während des Tests variieren</li>
+	                <li><strong>Fehlerberichte:</strong> Bitte Android-Version, App-Version und Git-Anbieter angeben</li>
+	                <li><strong>Feature-Anfragen:</strong> Geplante Arbeit steht auf der Roadmap</li>
+	              </ul>
+	            </div>
           </div>
 
           <div class="contact-form-container">
@@ -134,16 +126,16 @@ import Footer from '../../components/Footer.astro';
             <div class="faq-item">
               <h3>Welche Git-Hosting-Services werden unterstützt?</h3>
               <p>
-                GitSy funktioniert mit jedem Git-Hosting-Service, einschließlich GitHub, GitLab, 
-                Bitbucket, Azure DevOps und selbst gehosteten Git-Servern.
+	                GitSy ist für HTTPS-Git-Repositories ausgelegt. GitHub, GitLab und selbst gehostete
+	                HTTPS-Git-Server sind die primär dokumentierten Ziele.
               </p>
             </div>
 
             <div class="faq-item">
               <h3>Kann ich GitSy offline verwenden?</h3>
               <p>
-                Ja, du kannst Notizen offline erstellen und bearbeiten. Deine Änderungen werden 
-                automatisch synchronisiert, wenn du wieder mit dem Internet verbunden bist.
+	                Du kannst Dateien im ausgewählten Ordner offline mit deiner bevorzugten Android-App
+	                bearbeiten. GitSy synchronisiert den Ordner, wenn du Sync startest und Netzwerk verfügbar ist.
               </p>
             </div>
 
@@ -158,8 +150,8 @@ import Footer from '../../components/Footer.astro';
             <div class="faq-item">
               <h3>Kann ich meine Notizen exportieren?</h3>
               <p>
-                Ja, du kannst einzelne Notizen oder alle deine Notizen jederzeit exportieren. 
-                Deine Notizen werden als Standard-Markdown-Dateien in deinem Git-Repository gespeichert.
+	                GitSy speichert den ausgewählten Ordner in einem Git-Repository. Du kannst dieses
+	                Repository mit Standard-Git-Werkzeugen klonen oder exportieren.
               </p>
             </div>
 

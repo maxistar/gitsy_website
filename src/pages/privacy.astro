@@ -38,15 +38,14 @@ import Layout from '../layouts/Layout.astro';
             <h3>2.1 Information You Provide</h3>
             <ul>
               <li><strong>Git Repository Credentials:</strong> Repository URLs, usernames, and access tokens you provide to connect to your Git repositories</li>
-              <li><strong>Notes Content:</strong> The text content of your notes (stored locally and in your Git repository)</li>
+              <li><strong>Folder Content:</strong> The files in the folder you choose to synchronize, stored locally and in your Git repository</li>
               <li><strong>App Settings:</strong> Your preferences and configuration settings within the app</li>
             </ul>
 
             <h3>2.2 Information Automatically Collected</h3>
             <ul>
-              <li><strong>Device Information:</strong> Device type, operating system version, and app version</li>
-              <li><strong>Usage Data:</strong> App usage patterns, crash reports, and performance metrics</li>
-              <li><strong>Log Data:</strong> Error logs and diagnostic information to improve app functionality</li>
+              <li><strong>App Version:</strong> The installed app version may be visible in the app interface</li>
+              <li><strong>Local Status Data:</strong> Repository status, last sync time, and synchronization state are stored on your device</li>
             </ul>
 
             <h3>2.3 Information We Do NOT Collect</h3>
@@ -61,11 +60,9 @@ import Layout from '../layouts/Layout.astro';
             <h2>3. How We Use Your Information</h2>
             <p>We use the collected information for the following purposes:</p>
             <ul>
-              <li><strong>App Functionality:</strong> To provide core features like Git synchronization and note management</li>
-              <li><strong>Technical Support:</strong> To diagnose and resolve technical issues</li>
-              <li><strong>App Improvement:</strong> To analyze usage patterns and improve app performance</li>
-              <li><strong>Security:</strong> To detect and prevent security threats or unauthorized access</li>
-              <li><strong>Communication:</strong> To respond to your inquiries and provide customer support</li>
+	              <li><strong>App Functionality:</strong> To provide core features like Git synchronization and repository management</li>
+	              <li><strong>Technical Support:</strong> To diagnose issues when you contact us and provide details</li>
+	              <li><strong>Communication:</strong> To respond to your inquiries</li>
             </ul>
           </div>
 
@@ -74,23 +71,22 @@ import Layout from '../layouts/Layout.astro';
             
             <h3>4.1 Your Notes</h3>
             <p>
-              Your notes are stored in two locations:
+	              Your synchronized files are stored in two locations:
             </p>
             <ul>
-              <li><strong>Locally on your device:</strong> For offline access and performance</li>
+	              <li><strong>Locally on your device:</strong> In the folder you select and in app-managed working files</li>
               <li><strong>In your Git repository:</strong> For synchronization across devices</li>
             </ul>
             <p>
-              We do not store your notes on our servers. You maintain complete control over your data 
+	              We do not store your synchronized content on our servers. You maintain control over your data 
               through your chosen Git hosting provider.
             </p>
 
             <h3>4.2 Security Measures</h3>
             <ul>
-              <li>All data transmission is encrypted using industry-standard protocols</li>
+	              <li>Git traffic uses the security provided by HTTPS and your Git hosting provider</li>
               <li>Git credentials are stored securely on your device using platform security features</li>
-              <li>We implement regular security audits and updates</li>
-              <li>Access to any collected data is restricted to authorized personnel only</li>
+	              <li>We do not operate a hosted notes backend for your synchronized files</li>
             </ul>
           </div>
 
@@ -103,9 +99,7 @@ import Layout from '../layouts/Layout.astro';
               We may share limited data with trusted third-party service providers who assist us in:
             </p>
             <ul>
-              <li>Analytics and app performance monitoring</li>
-              <li>Crash reporting and error tracking</li>
-              <li>Customer support services</li>
+	              <li>Customer support, when you contact us directly</li>
             </ul>
 
             <h3>5.2 Legal Requirements</h3>
@@ -126,10 +120,10 @@ import Layout from '../layouts/Layout.astro';
             
             <h3>6.1 Data Access and Control</h3>
             <ul>
-              <li><strong>Access:</strong> You can access all your notes through the app or directly through your Git repository</li>
-              <li><strong>Modification:</strong> You can edit or delete your notes at any time</li>
-              <li><strong>Export:</strong> You can export your notes in standard formats</li>
-              <li><strong>Deletion:</strong> You can delete your notes and disconnect repositories at any time</li>
+	              <li><strong>Access:</strong> You can access synchronized files through the selected folder or directly through your Git repository</li>
+	              <li><strong>Modification:</strong> You can edit or delete files at any time using your preferred tools</li>
+	              <li><strong>Export:</strong> You can clone or export your Git repository using standard Git tools</li>
+	              <li><strong>Deletion:</strong> You can delete files and disconnect repositories at any time</li>
             </ul>
 
             <h3>6.2 App Permissions</h3>
@@ -139,7 +133,6 @@ import Layout from '../layouts/Layout.astro';
             <ul>
               <li>Internet access (required for Git synchronization)</li>
               <li>Storage access (required for local note storage)</li>
-              <li>Network state access (to detect connectivity)</li>
             </ul>
           </div>
 
@@ -152,7 +145,6 @@ import Layout from '../layouts/Layout.astro';
             <ul>
               <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">GitHub Privacy Statement</a></li>
               <li><a href="https://about.gitlab.com/privacy/" target="_blank">GitLab Privacy Policy</a></li>
-              <li><a href="https://www.atlassian.com/legal/privacy-policy" target="_blank">Bitbucket Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -197,8 +189,8 @@ import Layout from '../layouts/Layout.astro';
               If you have any questions about this Privacy Policy or our privacy practices, please contact us:
             </p>
             <div class="contact-info">
-              <p><strong>Email:</strong> <a href="mailto:privacy@gitsy.app">privacy@gitsy.app</a></p>
-              <p><strong>Support:</strong> <a href="mailto:support@gitsy.app">support@gitsy.app</a></p>
+              <p><strong>Email:</strong> <a href="mailto:privacy@gitsy.de">privacy@gitsy.de</a></p>
+              <p><strong>Support:</strong> <a href="mailto:support@gitsy.de">support@gitsy.de</a></p>
               <p><strong>Website:</strong> <a href="/contact">Contact Page</a></p>
             </div>
           </div>

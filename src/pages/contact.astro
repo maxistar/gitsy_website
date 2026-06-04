@@ -31,7 +31,7 @@ import Layout from '../layouts/Layout.astro';
                 <div class="method-content">
                   <h3>Email Support</h3>
                   <p>For technical support and general inquiries</p>
-                  <a href="mailto:support@gitsy.app" class="contact-link">support@gitsy.app</a>
+                  <a href="mailto:support@gitsy.de" class="contact-link">support@gitsy.de</a>
                 </div>
               </div>
 
@@ -40,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
                 <div class="method-content">
                   <h3>Bug Reports</h3>
                   <p>Found a bug? Report it on our GitHub issues page</p>
-                  <a href="https://github.com/gitsy/issues" class="contact-link">GitHub Issues</a>
+                  <a href="https://github.com/maxistar/gitsy_website/issues" class="contact-link">GitHub Issues</a>
                 </div>
               </div>
 
@@ -49,26 +49,18 @@ import Layout from '../layouts/Layout.astro';
                 <div class="method-content">
                   <h3>Feature Requests</h3>
                   <p>Have an idea for improving GitSy?</p>
-                  <a href="mailto:features@gitsy.app" class="contact-link">features@gitsy.app</a>
+                  <a href="/roadmap" class="contact-link">Roadmap</a>
                 </div>
               </div>
 
-              <div class="contact-method">
-                <div class="method-icon">💬</div>
-                <div class="method-content">
-                  <h3>Community Discussion</h3>
-                  <p>Join discussions with other users</p>
-                  <a href="https://discord.gg/gitsy" class="contact-link">Discord Community</a>
-                </div>
-              </div>
             </div>
 
             <div class="response-times">
-              <h3>Response Times</h3>
+              <h3>Notes</h3>
               <ul>
-                <li><strong>Support inquiries:</strong> Within 24 hours</li>
-                <li><strong>Bug reports:</strong> Within 48 hours</li>
-                <li><strong>Feature requests:</strong> Within 1 week</li>
+                <li><strong>Support:</strong> Response times may vary during testing</li>
+                <li><strong>Bug reports:</strong> Include Android version, app version, and repository provider</li>
+                <li><strong>Feature requests:</strong> Planned work is tracked on the roadmap</li>
               </ul>
             </div>
           </div>
@@ -132,16 +124,16 @@ import Layout from '../layouts/Layout.astro';
             <div class="faq-item">
               <h3>Which Git hosting services are supported?</h3>
               <p>
-                GitSy works with any Git hosting service including GitHub, GitLab, Bitbucket, 
-                Azure DevOps, and self-hosted Git servers.
+                GitSy is designed for HTTPS Git repositories. GitHub, GitLab, and self-hosted HTTPS Git
+                servers are the primary documented targets.
               </p>
             </div>
 
             <div class="faq-item">
               <h3>Can I use GitSy offline?</h3>
               <p>
-                Yes, you can create and edit notes offline. Your changes will be synchronized 
-                automatically when you reconnect to the internet.
+                You can edit files in the selected folder with your preferred Android app while offline.
+                GitSy synchronizes the folder when you run sync and network access is available.
               </p>
             </div>
 
@@ -156,8 +148,8 @@ import Layout from '../layouts/Layout.astro';
             <div class="faq-item">
               <h3>Can I export my notes?</h3>
               <p>
-                Yes, you can export individual notes or all your notes at any time. Your notes 
-                are stored as standard Markdown files in your Git repository.
+                GitSy stores your selected folder in a Git repository. You can clone or export that
+                repository with standard Git tools.
               </p>
             </div>
 

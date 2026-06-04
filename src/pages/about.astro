@@ -4,14 +4,14 @@ import Layout from '../layouts/Layout.astro';
 
 ---
 
-<Layout title="About GitSy - Git-based Note Synchronization" description="Learn about GitSy, the Android app that uses Git repositories to sync your notes across all devices securely and efficiently.">
+<Layout title="About GitSy - Git-based Folder Synchronization" description="Learn about GitSy, the Android app that uses Git repositories to sync a selected local folder.">
 
   
   <main>
     <section class="page-hero">
       <div class="container">
         <h1>About GitSy</h1>
-        <p class="lead">The story behind Git-based note synchronization</p>
+        <p class="lead">The story behind Git-based folder synchronization for Android</p>
       </div>
     </section>
 
@@ -21,31 +21,30 @@ import Layout from '../layouts/Layout.astro';
           <div class="main-content">
             <h2>Our Mission</h2>
             <p>
-              GitSy was created to solve a fundamental problem: how to keep your notes synchronized 
-              across multiple devices while maintaining complete control over your data. Traditional 
-              note-taking apps lock your data into proprietary systems, but GitSy leverages the power 
-              of Git to give you freedom and control.
+              GitSy was created to solve a focused problem: how to synchronize a folder of personal
+              files from an Android device with a Git repository while keeping ownership of the data.
+              Instead of locking content into a proprietary note service, GitSy uses Git as the storage
+              and synchronization layer.
             </p>
 
             <h2>Why Git for Notes?</h2>
             <p>
-              Git is the world's most trusted version control system, used by millions of developers 
-              to manage code. We realized that the same principles that make Git perfect for code 
-              make it ideal for notes:
+              Git is a proven version control system. The same properties that make Git useful for code
+              can also help with personal notes and text files:
             </p>
             
             <ul class="feature-list">
-              <li><strong>Version History:</strong> Every change to your notes is tracked and recoverable</li>
-              <li><strong>Distributed:</strong> Your notes exist on all your devices, not just in the cloud</li>
-              <li><strong>Conflict Resolution:</strong> Smart merging handles simultaneous edits</li>
+              <li><strong>Version History:</strong> Synced changes are committed to your repository</li>
+              <li><strong>Distributed:</strong> Your files can be cloned and inspected with standard Git tools</li>
+              <li><strong>Portable:</strong> The repository remains usable outside the app</li>
               <li><strong>Ownership:</strong> Your data stays in repositories you control</li>
             </ul>
 
             <h2>The Technology</h2>
             <p>
-              GitSy is built as a native Android application that implements Git protocols directly. 
-              This means your notes are stored as plain text files in your Git repository, making them 
-              accessible from any device with Git, not just through our app.
+              GitSy is built as a native Android application and uses JGit for Git operations. It works
+              with folders selected through Android's Storage Access Framework, then synchronizes those
+              files with an HTTPS Git repository.
             </p>
 
             <div class="stats-grid">
@@ -58,23 +57,23 @@ import Layout from '../layouts/Layout.astro';
                 <div class="stat-label">Vendor Lock-in</div>
               </div>
               <div class="stat">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Backup Copies</div>
+                <div class="stat-number">Git</div>
+                <div class="stat-label">Version History</div>
               </div>
             </div>
 
             <h2>Privacy & Security</h2>
             <p>
-              Your privacy is paramount. GitSy doesn't store your notes on our servers - they live 
-              in your Git repository. Whether you use GitHub, GitLab, or your own Git server, you 
-              maintain complete control over who has access to your data.
+              GitSy does not provide a hosted storage service for your content. Your files remain on
+              your device and in the Git repository you choose. Access control and repository privacy
+              are managed through your Git hosting provider or self-hosted Git server.
             </p>
 
             <h2>Future Vision</h2>
             <p>
-              We envision a world where your digital notes are as permanent and portable as physical 
-              notebooks. By building on Git's foundation, GitSy ensures that your notes will be 
-              accessible decades from now, regardless of whether our app still exists.
+              The long-term goal is to make GitSy a practical companion for people who keep notes as
+              plain files. Features such as richer note management, SSH support, OAuth, search, and
+              advanced conflict handling belong on the roadmap until they are implemented.
             </p>
           </div>
 
@@ -83,11 +82,11 @@ import Layout from '../layouts/Layout.astro';
               <h3>Quick Facts</h3>
               <ul class="facts-list">
                 <li>📱 Native Android app</li>
-                <li>🔓 Open source compatible</li>
-                <li>🌐 Works with any Git hosting</li>
-                <li>📝 Markdown support</li>
-                <li>🔄 Real-time sync</li>
-                <li>🔒 End-to-end encryption</li>
+                <li>🔓 Uses Git repositories you control</li>
+                <li>🌐 HTTPS Git repository support</li>
+                <li>📁 Android folder access through SAF</li>
+                <li>🔄 Manual repository sync</li>
+                <li>🔐 Protected credential storage</li>
               </ul>
             </div>
 
@@ -96,10 +95,8 @@ import Layout from '../layouts/Layout.astro';
               <ul class="platforms-list">
                 <li>✅ GitHub</li>
                 <li>✅ GitLab</li>
-                <li>✅ Bitbucket</li>
                 <li>✅ Self-hosted Git</li>
-                <li>✅ Gitea</li>
-                <li>✅ Azure DevOps</li>
+                <li>⚙️ Other HTTPS Git servers may work</li>
               </ul>
             </div>
           </div>

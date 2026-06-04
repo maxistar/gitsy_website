@@ -4,14 +4,14 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="Über GitSy - Git-basierte Notizsynchronisation" description="Erfahre mehr über GitSy, die Android-App, die Git-Repositories nutzt, um deine Notizen sicher und effizient auf allen Geräten zu synchronisieren.">
+<Layout title="Über GitSy - Git-basierte Ordnersynchronisation" description="Erfahre mehr über GitSy, die Android-App zur Synchronisation eines ausgewählten lokalen Ordners mit einem Git-Repository.">
   
   
   <main>
     <section class="page-hero">
       <div class="container">
         <h1>Über GitSy</h1>
-        <p class="lead">Die Geschichte hinter der Git-basierten Notizsynchronisation</p>
+        <p class="lead">Die Geschichte hinter Git-basierter Ordnersynchronisation für Android</p>
       </div>
     </section>
 
@@ -21,32 +21,30 @@ import Footer from '../../components/Footer.astro';
           <div class="main-content">
             <h2>Unsere Mission</h2>
             <p>
-              GitSy wurde entwickelt, um ein grundlegendes Problem zu lösen: Wie kann man Notizen 
-              über mehrere Geräte hinweg synchronisieren und dabei die vollständige Kontrolle über 
-              seine Daten behalten. Herkömmliche Notiz-Apps sperren deine Daten in proprietäre Systeme 
-              ein, aber GitSy nutzt die Macht von Git, um dir Freiheit und Kontrolle zu geben.
+	              GitSy wurde für eine fokussierte Aufgabe entwickelt: einen Ordner persönlicher Dateien
+	              von einem Android-Gerät mit einem Git-Repository zu synchronisieren und dabei die Kontrolle
+	              über die Daten zu behalten. Statt eines proprietären Cloud-Dienstes nutzt GitSy Git als
+	              Speicher- und Synchronisationsschicht.
             </p>
 
             <h2>Warum Git für Notizen?</h2>
             <p>
-              Git ist das vertrauenswürdigste Versionskontrollsystem der Welt, das von Millionen 
-              von Entwicklern zur Verwaltung von Code verwendet wird. Wir erkannten, dass dieselben 
-              Prinzipien, die Git perfekt für Code machen, es auch ideal für Notizen machen:
+	              Git ist ein bewährtes Versionskontrollsystem. Die Eigenschaften, die für Code nützlich
+	              sind, helfen auch bei persönlichen Notizen und Textdateien:
             </p>
             
             <ul class="feature-list">
-              <li><strong>Versionsverlauf:</strong> Jede Änderung an deinen Notizen wird verfolgt und ist wiederherstellbar</li>
-              <li><strong>Verteilt:</strong> Deine Notizen existieren auf allen deinen Geräten, nicht nur in der Cloud</li>
-              <li><strong>Konfliktlösung:</strong> Intelligentes Zusammenführen behandelt gleichzeitige Bearbeitungen</li>
+	              <li><strong>Versionsverlauf:</strong> Synchronisierte Änderungen werden in dein Repository übernommen</li>
+	              <li><strong>Verteilt:</strong> Deine Dateien können mit Standard-Git-Werkzeugen geklont und geprüft werden</li>
+	              <li><strong>Portabel:</strong> Das Repository bleibt auch außerhalb der App nutzbar</li>
               <li><strong>Eigentum:</strong> Deine Daten bleiben in Repositories, die du kontrollierst</li>
             </ul>
 
             <h2>Die Technologie</h2>
             <p>
-              GitSy ist als native Android-Anwendung entwickelt, die Git-Protokolle direkt 
-              implementiert. Das bedeutet, dass deine Notizen als einfache Textdateien in deinem 
-              Git-Repository gespeichert werden, wodurch sie von jedem Gerät mit Git zugänglich 
-              sind, nicht nur über unsere App.
+	              GitSy ist eine native Android-Anwendung und nutzt JGit für Git-Operationen. Die App
+	              arbeitet mit Ordnern, die über Androids Storage Access Framework ausgewählt werden,
+	              und synchronisiert diese Dateien mit einem HTTPS-Git-Repository.
             </p>
 
             <div class="stats-grid">
@@ -59,25 +57,23 @@ import Footer from '../../components/Footer.astro';
                 <div class="stat-label">Vendor Lock-in</div>
               </div>
               <div class="stat">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Backup-Kopien</div>
+	                <div class="stat-number">Git</div>
+	                <div class="stat-label">Versionsverlauf</div>
               </div>
             </div>
 
             <h2>Datenschutz & Sicherheit</h2>
             <p>
-              Deine Privatsphäre steht an erster Stelle. GitSy speichert deine Notizen nicht 
-              auf unseren Servern - sie leben in deinem Git-Repository. Ob du GitHub, GitLab 
-              oder deinen eigenen Git-Server verwendest, du behältst die vollständige Kontrolle 
-              darüber, wer Zugang zu deinen Daten hat.
+	              GitSy betreibt keinen eigenen Hosting-Dienst für deine Inhalte. Deine Dateien bleiben
+	              auf deinem Gerät und im gewählten Git-Repository. Zugriff und Repository-Privatsphäre
+	              verwaltest du über deinen Git-Hosting-Anbieter oder eigenen Git-Server.
             </p>
 
             <h2>Zukunftsvision</h2>
             <p>
-              Wir stellen uns eine Welt vor, in der deine digitalen Notizen genauso dauerhaft 
-              und portabel sind wie physische Notizbücher. Durch den Aufbau auf Gits Fundament 
-              stellt GitSy sicher, dass deine Notizen auch in Jahrzehnten noch zugänglich 
-              sind, unabhängig davon, ob unsere App noch existiert.
+	              Langfristig soll GitSy ein praktischer Begleiter für Menschen werden, die Notizen als
+	              normale Dateien speichern. Erweiterte Notizverwaltung, SSH, OAuth, Suche und bessere
+	              Konfliktbearbeitung bleiben auf der Roadmap, bis sie implementiert sind.
             </p>
           </div>
 
@@ -86,11 +82,11 @@ import Footer from '../../components/Footer.astro';
               <h3>Schnelle Fakten</h3>
               <ul class="facts-list">
                 <li>📱 Native Android-App</li>
-                <li>🔓 Open-Source-kompatibel</li>
-                <li>🌐 Funktioniert mit jedem Git-Hosting</li>
-                <li>📝 Markdown-Unterstützung</li>
-                <li>🔄 Echtzeit-Synchronisation</li>
-                <li>🔒 Ende-zu-Ende-Verschlüsselung</li>
+	                <li>🔓 Git-Repositories unter deiner Kontrolle</li>
+	                <li>🌐 HTTPS-Git-Repository-Unterstützung</li>
+	                <li>📁 Android-Ordnerzugriff über SAF</li>
+	                <li>🔄 Manuelle Repository-Synchronisation</li>
+	                <li>🔐 Geschützte Speicherung von Zugangsdaten</li>
               </ul>
             </div>
 
@@ -99,10 +95,8 @@ import Footer from '../../components/Footer.astro';
               <ul class="platforms-list">
                 <li>✅ GitHub</li>
                 <li>✅ GitLab</li>
-                <li>✅ Bitbucket</li>
-                <li>✅ Selbst gehostetes Git</li>
-                <li>✅ Gitea</li>
-                <li>✅ Azure DevOps</li>
+	                <li>✅ Selbst gehostetes Git</li>
+	                <li>⚙️ Andere HTTPS-Git-Server können funktionieren</li>
               </ul>
             </div>
           </div>

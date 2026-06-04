@@ -4,14 +4,14 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="GitSy herunterladen - Heute starten" description="Lade GitSy für Android herunter und beginne mit der Synchronisation deiner Notizen über Geräte hinweg mit Git-Repositories.">
+<Layout title="GitSy herunterladen - Heute starten" description="Lade GitSy für Android herunter und beginne mit der Synchronisation eines lokalen Ordners über ein Git-Repository.">
   
   
   <main>
     <section class="page-hero">
       <div class="container">
         <h1>GitSy herunterladen</h1>
-        <p class="lead">Starte heute mit Git-basierter Notizsynchronisation</p>
+        <p class="lead">Starte heute mit Git-basierter Ordnersynchronisation</p>
       </div>
     </section>
 
@@ -24,7 +24,7 @@ import Footer from '../../components/Footer.astro';
               
               <div class="app-info">
                 <h2>GitSy für Android</h2>
-                <p>Die vollständige Git-basierte Notizsynchronisationserfahrung für dein Android-Gerät.</p>
+	                <p>Synchronisiere einen ausgewählten Android-Ordner mit einem HTTPS-Git-Repository.</p>
                 
                 <div class="app-features">
                   <div class="feature">
@@ -33,31 +33,31 @@ import Footer from '../../components/Footer.astro';
                   </div>
                   <div class="feature">
                     <span class="feature-icon">🔄</span>
-                    <span>Echtzeit-Git-Synchronisation</span>
+	                    <span>Git-Ordnersynchronisation</span>
                   </div>
                   <div class="feature">
                     <span class="feature-icon">📝</span>
-                    <span>Markdown-Unterstützung</span>
+	                    <span>SAF-Ordnerzugriff</span>
                   </div>
                   <div class="feature">
                     <span class="feature-icon">🔒</span>
-                    <span>Sicher & Privat</span>
+	                    <span>Zugangsdaten geschützt</span>
                   </div>
                 </div>
 
                 <div class="download-buttons">
-                  <a href="#" class="btn btn-primary btn-large download-btn">
+	                  <a href="https://play.google.com/store/apps/details?id=me.maxistar.gitsy" class="btn btn-primary btn-large download-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5H5.21L4.27,3H1M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"/>
                     </svg>
                     Von Google Play herunterladen
                   </a>
                   
-                  <a href="#" class="btn btn-secondary direct-download">
+	                  <a href="/de/docs/closedtesting/" class="btn btn-secondary direct-download">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
                     </svg>
-                    Direkter APK-Download
+	                    Geschlossenen Test öffnen
                   </a>
                 </div>
               </div>
@@ -80,15 +80,15 @@ import Footer from '../../components/Footer.astro';
               <div class="version-info">
                 <div class="version-item">
                   <span class="label">Aktuelle Version:</span>
-                  <span class="value">1.2.3</span>
+	                  <span class="value">0.0.4</span>
                 </div>
                 <div class="version-item">
                   <span class="label">Veröffentlichungsdatum:</span>
-                  <span class="value">15. Januar 2025</span>
+	                  <span class="value">Siehe Google Play</span>
                 </div>
                 <div class="version-item">
                   <span class="label">Dateigröße:</span>
-                  <span class="value">12,5 MB</span>
+	                  <span class="value">Je nach Gerät</span>
                 </div>
               </div>
             </div>
@@ -96,10 +96,10 @@ import Footer from '../../components/Footer.astro';
             <div class="info-card">
               <h3>Was ist neu</h3>
               <ul class="changelog">
-                <li>Verbesserte Git-Performance</li>
-                <li>Erweiterte Konfliktlösung</li>
-                <li>Neues dunkles Theme</li>
-                <li>Fehlerbehebungen und Stabilitätsverbesserungen</li>
+	                <li>Android-Ordnersynchronisation über Git</li>
+	                <li>HTTPS-Repository-Zugangsdaten</li>
+	                <li>Manuelle Synchronisation für ein oder alle Projekte</li>
+	                <li>Foreground-Service für aktive Synchronisation</li>
               </ul>
             </div>
           </div>
@@ -112,14 +112,14 @@ import Footer from '../../components/Footer.astro';
               <div class="step-number">1</div>
               <div class="step-content">
                 <h3>App herunterladen</h3>
-                <p>Klicke auf den Download-Button oben, um GitSy aus dem Google Play Store zu erhalten oder die APK direkt herunterzuladen.</p>
+	                <p>Nutze den Google-Play-Link oben. Falls die App im geschlossenen Test ist, folge zuerst der Testanleitung.</p>
               </div>
             </div>
             
             <div class="guide-step">
               <div class="step-content">
                 <h3>Repository einrichten</h3>
-                <p>Erstelle ein neues Repository auf GitHub, GitLab oder deinem bevorzugten Git-Hosting-Service zur Speicherung deiner Notizen.</p>
+	                <p>Erstelle ein neues HTTPS-Git-Repository auf GitHub, GitLab oder deinem eigenen Git-Server.</p>
               </div>
               <div class="step-number">2</div>
             </div>
@@ -128,7 +128,7 @@ import Footer from '../../components/Footer.astro';
               <div class="step-number">3</div>
               <div class="step-content">
                 <h3>Verbinden und synchronisieren</h3>
-                <p>Öffne GitSy, verbinde dich mit deinem Repository und beginne mit der Erstellung von Notizen, die auf allen Geräten synchronisiert werden.</p>
+	                <p>Öffne GitSy, verbinde den ausgewählten Ordner mit deinem Repository und starte die Synchronisation in der App.</p>
               </div>
             </div>
           </div>
