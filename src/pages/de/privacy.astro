@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="Datenschutzerklärung - GitSy" description="Datenschutzerklärung für GitSy - Erfahren Sie, wie wir Ihre Daten und Privatsphäre schützen, wenn Sie unsere Git-basierte Notizsynchronisations-App verwenden.">
+<Layout title="Datenschutzerklärung - GitSy" description="Datenschutzerklärung für GitSy, die Git-basierte Ordnersynchronisations-App.">
   
   
   <main>
@@ -12,7 +12,7 @@ import Footer from '../../components/Footer.astro';
       <div class="container">
         <h1>Datenschutzerklärung</h1>
         <p class="lead">Wie wir Ihre Daten und Privatsphäre schützen</p>
-        <p class="last-updated">Zuletzt aktualisiert: 15. Januar 2025</p>
+        <p class="last-updated">Zuletzt aktualisiert: 4. Juni 2026</p>
       </div>
     </section>
 
@@ -27,8 +27,8 @@ import Footer from '../../components/Footer.astro';
               schützen, wenn Sie unsere mobile Anwendung und verwandte Dienste nutzen.
             </p>
             <p>
-              GitSy wurde mit Fokus auf Datenschutz entwickelt. Ihre Notizen werden in Ihren eigenen 
-              Git-Repositories gespeichert, was Ihnen vollständige Kontrolle über Ihre Daten gibt.
+	              GitSy wurde mit Fokus auf Datenschutz entwickelt. Synchronisierte Dateien werden auf
+	              Ihrem Gerät und im von Ihnen gewählten Git-Repository gespeichert.
             </p>
           </div>
 
@@ -38,20 +38,19 @@ import Footer from '../../components/Footer.astro';
             <h3>2.1 Von Ihnen bereitgestellte Informationen</h3>
             <ul>
               <li><strong>Git-Repository-Anmeldedaten:</strong> Repository-URLs, Benutzernamen und Zugangs-Token, die Sie zur Verbindung mit Ihren Git-Repositories bereitstellen</li>
-              <li><strong>Notizinhalt:</strong> Der Textinhalt Ihrer Notizen (lokal und in Ihrem Git-Repository gespeichert)</li>
+	              <li><strong>Ordnerinhalt:</strong> Die Dateien im zur Synchronisation ausgewählten Ordner, lokal und in Ihrem Git-Repository gespeichert</li>
               <li><strong>App-Einstellungen:</strong> Ihre Präferenzen und Konfigurationseinstellungen in der App</li>
             </ul>
 
             <h3>2.2 Automatisch gesammelte Informationen</h3>
             <ul>
-              <li><strong>Geräteinformationen:</strong> Gerätetyp, Betriebssystemversion und App-Version</li>
-              <li><strong>Nutzungsdaten:</strong> App-Nutzungsmuster, Absturzberichte und Leistungsmetriken</li>
-              <li><strong>Protokolldaten:</strong> Fehlerprotokolle und Diagnoseinformationen zur Verbesserung der App-Funktionalität</li>
+	              <li><strong>App-Version:</strong> Die installierte App-Version kann in der App-Oberfläche angezeigt werden</li>
+	              <li><strong>Lokale Statusdaten:</strong> Repository-Status, letzte Synchronisationszeit und Synchronisationszustand werden auf Ihrem Gerät gespeichert</li>
             </ul>
 
             <h3>2.3 Informationen, die wir NICHT sammeln</h3>
             <ul>
-              <li>Wir speichern den Inhalt Ihrer Notizen nicht auf unseren Servern</li>
+	              <li>Wir speichern den Inhalt des synchronisierten Ordners nicht auf unseren Servern</li>
               <li>Wir greifen nicht auf den Inhalt Ihrer Git-Repositories zu und lesen ihn nicht</li>
               <li>Wir sammeln keine persönlichen Identifikationsinformationen über das für die App-Funktionalität Notwendige hinaus</li>
             </ul>
@@ -61,36 +60,33 @@ import Footer from '../../components/Footer.astro';
             <h2>3. Wie wir Ihre Informationen verwenden</h2>
             <p>Wir verwenden die gesammelten Informationen für folgende Zwecke:</p>
             <ul>
-              <li><strong>App-Funktionalität:</strong> Zur Bereitstellung von Kernfunktionen wie Git-Synchronisation und Notizverwaltung</li>
-              <li><strong>Technischer Support:</strong> Zur Diagnose und Lösung technischer Probleme</li>
-              <li><strong>App-Verbesserung:</strong> Zur Analyse von Nutzungsmustern und Verbesserung der App-Leistung</li>
-              <li><strong>Sicherheit:</strong> Zur Erkennung und Verhinderung von Sicherheitsbedrohungen oder unbefugtem Zugriff</li>
-              <li><strong>Kommunikation:</strong> Zur Beantwortung Ihrer Anfragen und Bereitstellung von Kundensupport</li>
+	              <li><strong>App-Funktionalität:</strong> Zur Bereitstellung von Git-Synchronisation und Repository-Verwaltung</li>
+	              <li><strong>Technischer Support:</strong> Zur Diagnose von Problemen, wenn Sie uns kontaktieren und Details bereitstellen</li>
+	              <li><strong>Kommunikation:</strong> Zur Beantwortung Ihrer Anfragen</li>
             </ul>
           </div>
 
           <div class="privacy-section">
             <h2>4. Datenspeicherung und Sicherheit</h2>
             
-            <h3>4.1 Ihre Notizen</h3>
+	            <h3>4.1 Ihre Dateien</h3>
             <p>
-              Ihre Notizen werden an zwei Orten gespeichert:
+	              Ihre synchronisierten Dateien werden an zwei Orten gespeichert:
             </p>
             <ul>
-              <li><strong>Lokal auf Ihrem Gerät:</strong> Für Offline-Zugriff und Leistung</li>
+	              <li><strong>Lokal auf Ihrem Gerät:</strong> Im ausgewählten Ordner und in appverwalteten Arbeitsdateien</li>
               <li><strong>In Ihrem Git-Repository:</strong> Für Synchronisation zwischen Geräten</li>
             </ul>
             <p>
-              Wir speichern Ihre Notizen nicht auf unseren Servern. Sie behalten vollständige Kontrolle über 
+	              Wir speichern Ihre synchronisierten Inhalte nicht auf unseren Servern. Sie behalten Kontrolle über 
               Ihre Daten durch Ihren gewählten Git-Hosting-Anbieter.
             </p>
 
             <h3>4.2 Sicherheitsmaßnahmen</h3>
             <ul>
-              <li>Alle Datenübertragungen werden mit branchenüblichen Protokollen verschlüsselt</li>
+	              <li>Git-Datenverkehr nutzt die Sicherheit von HTTPS und Ihres Git-Hosting-Anbieters</li>
               <li>Git-Anmeldedaten werden sicher auf Ihrem Gerät mit Plattform-Sicherheitsfunktionen gespeichert</li>
-              <li>Wir führen regelmäßige Sicherheitsaudits und Updates durch</li>
-              <li>Der Zugriff auf gesammelte Daten ist nur auf autorisiertes Personal beschränkt</li>
+	              <li>Wir betreiben kein gehostetes Notiz-Backend für Ihre synchronisierten Dateien</li>
             </ul>
           </div>
 
@@ -103,9 +99,7 @@ import Footer from '../../components/Footer.astro';
               Wir können begrenzte Daten mit vertrauenswürdigen Drittanbietern teilen, die uns unterstützen bei:
             </p>
             <ul>
-              <li>Analytik und App-Leistungsüberwachung</li>
-              <li>Absturzberichten und Fehlerverfolgung</li>
-              <li>Kundensupport-Diensten</li>
+	              <li>Kundensupport, wenn Sie uns direkt kontaktieren</li>
             </ul>
 
             <h3>5.2 Rechtliche Anforderungen</h3>
@@ -126,10 +120,10 @@ import Footer from '../../components/Footer.astro';
             
             <h3>6.1 Datenzugriff und Kontrolle</h3>
             <ul>
-              <li><strong>Zugriff:</strong> Sie können auf alle Ihre Notizen über die App oder direkt über Ihr Git-Repository zugreifen</li>
-              <li><strong>Änderung:</strong> Sie können Ihre Notizen jederzeit bearbeiten oder löschen</li>
-              <li><strong>Export:</strong> Sie können Ihre Notizen in Standardformaten exportieren</li>
-              <li><strong>Löschung:</strong> Sie können Ihre Notizen löschen und Repositories jederzeit trennen</li>
+	              <li><strong>Zugriff:</strong> Sie können auf synchronisierte Dateien über den ausgewählten Ordner oder direkt über Ihr Git-Repository zugreifen</li>
+	              <li><strong>Änderung:</strong> Sie können Dateien jederzeit mit geeigneten Werkzeugen bearbeiten oder löschen</li>
+	              <li><strong>Export:</strong> Sie können Ihr Git-Repository mit Standard-Git-Werkzeugen klonen oder exportieren</li>
+	              <li><strong>Löschung:</strong> Sie können Dateien löschen und Repositories jederzeit trennen</li>
             </ul>
 
             <h3>6.2 App-Berechtigungen</h3>
@@ -138,8 +132,7 @@ import Footer from '../../components/Footer.astro';
             </p>
             <ul>
               <li>Internetzugang (erforderlich für Git-Synchronisation)</li>
-              <li>Speicherzugang (erforderlich für lokale Notizspeicherung)</li>
-              <li>Netzwerkstatus-Zugang (zur Erkennung der Konnektivität)</li>
+	              <li>Ordnerzugriff, den Sie über Androids Systemauswahl erteilen</li>
             </ul>
           </div>
 
@@ -152,7 +145,6 @@ import Footer from '../../components/Footer.astro';
             <ul>
               <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank">GitHub Datenschutzerklärung</a></li>
               <li><a href="https://about.gitlab.com/privacy/" target="_blank">GitLab Datenschutzerklärung</a></li>
-              <li><a href="https://www.atlassian.com/legal/privacy-policy" target="_blank">Bitbucket Datenschutzerklärung</a></li>
             </ul>
           </div>
 
@@ -198,8 +190,8 @@ import Footer from '../../components/Footer.astro';
               kontaktieren Sie uns bitte:
             </p>
             <div class="contact-info">
-              <p><strong>E-Mail:</strong> <a href="mailto:privacy@gitsy.app">privacy@gitsy.app</a></p>
-              <p><strong>Support:</strong> <a href="mailto:support@gitsy.app">support@gitsy.app</a></p>
+	              <p><strong>E-Mail:</strong> <a href="mailto:privacy@gitsy.de">privacy@gitsy.de</a></p>
+	              <p><strong>Support:</strong> <a href="mailto:support@gitsy.de">support@gitsy.de</a></p>
               <p><strong>Website:</strong> <a href="/de/contact">Kontaktseite</a></p>
             </div>
           </div>

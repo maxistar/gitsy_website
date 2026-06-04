@@ -4,14 +4,14 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<Layout title="GitSy Dokumentation - Benutzerhandbuch" description="Vollständige Dokumentation und Benutzerhandbuch für GitSy, die Git-basierte Notizsynchronisations-App für Android.">
+<Layout title="GitSy Dokumentation - Benutzerhandbuch" description="Dokumentation für GitSy, die Git-basierte Ordnersynchronisations-App für Android.">
   
   
   <main>
     <section class="page-hero">
       <div class="container">
         <h1>Dokumentation</h1>
-        <p class="lead">Alles was du über die Verwendung von GitSy wissen musst</p>
+        <p class="lead">So verbindest du einen Android-Ordner mit einem Git-Repository</p>
       </div>
     </section>
 
@@ -24,7 +24,7 @@ import Footer from '../../components/Footer.astro';
               <ul>
                 <li><a href="#installation" class="nav-link">Installation</a></li>
                 <li><a href="#setup" class="nav-link">Ersteinrichtung</a></li>
-                <li><a href="#first-note" class="nav-link">Erste Notiz erstellen</a></li>
+	                <li><a href="#folder-workflow" class="nav-link">Ordner-Workflow</a></li>
               </ul>
             </div>
             
@@ -33,23 +33,23 @@ import Footer from '../../components/Footer.astro';
               <ul>
                 <li><a href="#repositories" class="nav-link">Repository-Einrichtung</a></li>
                 <li><a href="#authentication" class="nav-link">Authentifizierung</a></li>
-                <li><a href="#sync-settings" class="nav-link">Synchronisationseinstellungen</a></li>
+	                <li><a href="#sync" class="nav-link">Synchronisation</a></li>
               </ul>
             </div>
             
             <div class="nav-section">
               <h3>Funktionen</h3>
               <ul>
-                <li><a href="#note-management" class="nav-link">Notizverwaltung</a></li>
-                <li><a href="#markdown" class="nav-link">Markdown-Unterstützung</a></li>
-                <li><a href="#search" class="nav-link">Suche & Organisation</a></li>
+	                <li><a href="#project-management" class="nav-link">Projektverwaltung</a></li>
+	                <li><a href="#storage" class="nav-link">Ordnerzugriff</a></li>
+	                <li><a href="#roadmap" class="nav-link">Geplante Funktionen</a></li>
               </ul>
             </div>
             
             <div class="nav-section">
               <h3>Erweitert</h3>
               <ul>
-                <li><a href="#conflict-resolution" class="nav-link">Konfliktlösung</a></li>
+	                <li><a href="#conflicts" class="nav-link">Konflikte</a></li>
                 <li><a href="#backup" class="nav-link">Backup & Wiederherstellung</a></li>
                 <li><a href="#troubleshooting" class="nav-link">Fehlerbehebung</a></li>
               </ul>
@@ -61,7 +61,8 @@ import Footer from '../../components/Footer.astro';
               <h2>Installation</h2>
               <p>
                 GitSy ist für Android-Geräte mit Android 7.0 oder neuer verfügbar. 
-                Du kannst es aus dem Google Play Store installieren oder die APK direkt herunterladen.
+	                Du kannst es aus dem Google Play Store installieren. Falls die App im geschlossenen
+	                Test ist, folge zuerst der Testanleitung.
               </p>
               
               <h3>Systemanforderungen</h3>
@@ -76,8 +77,7 @@ import Footer from '../../components/Footer.astro';
                 <h4>Erforderliche Berechtigungen</h4>
                 <ul>
                   <li><strong>Internet:</strong> Für Git-Synchronisation</li>
-                  <li><strong>Speicher:</strong> Für lokale Notizspeicherung</li>
-                  <li><strong>Netzwerkstatus:</strong> Zur Erkennung der Konnektivität</li>
+	                  <li><strong>Ordnerzugriff:</strong> Von dir über Androids Ordnerauswahl erteilt</li>
                 </ul>
               </div>
             </section>
@@ -86,7 +86,7 @@ import Footer from '../../components/Footer.astro';
               <h2>Ersteinrichtung</h2>
               <p>
                 Nach der Installation von GitSy musst du es mit deinem Git-Repository verbinden. 
-                Dies ist ein einmaliger Prozess, der die Synchronisation auf allen deinen Geräten ermöglicht.
+	                Dies verbindet einen Android-Ordner mit einem Git-Repository.
               </p>
               
               <h3>Schritt 1: Repository erstellen</h3>
@@ -110,38 +110,38 @@ import Footer from '../../components/Footer.astro';
                 <li>Tippe auf "Repository hinzufügen" im Willkommensbildschirm</li>
                 <li>Gib deine Repository-URL ein</li>
                 <li>Stelle deine Authentifizierungsdaten bereit</li>
-                <li>Wähle einen lokalen Ordnernamen</li>
-                <li>Tippe auf "Verbinden", um die Verbindung herzustellen</li>
+	                <li>Wähle einen leeren lokalen Ordner über Androids Ordnerauswahl</li>
+	                <li>Speichere das Projekt, damit GitSy das Repository in diesen Ordner klont</li>
               </ol>
             </section>
 
-            <section id="first-note" class="doc-section">
-              <h2>Erste Notiz erstellen</h2>
-              <p>
-                Sobald dein Repository verbunden ist, kannst du sofort mit der Erstellung von Notizen beginnen. 
-                GitSy verwendet eine einfache Benutzeroberfläche, die sich auf deinen Inhalt konzentriert.
-              </p>
-              
-              <h3>Grundlagen der Notizerstellung</h3>
-              <ol>
-                <li>Tippe auf die "+"-Schaltfläche, um eine neue Notiz zu erstellen</li>
-                <li>Gib einen Titel für deine Notiz ein</li>
-                <li>Beginne mit der Eingabe deines Inhalts</li>
-                <li>GitSy speichert deine Änderungen automatisch</li>
-                <li>Die Synchronisation erfolgt automatisch im Hintergrund</li>
-              </ol>
+	            <section id="folder-workflow" class="doc-section">
+	              <h2>Ordner-Workflow</h2>
+	              <p>
+	                GitSy ersetzt deinen Notiz-Editor nicht. Erstelle und bearbeite Dateien mit deiner
+	                bevorzugten Android-App und nutze GitSy, um den Ordner mit Git zu synchronisieren.
+	              </p>
+	              
+	              <h3>Basisablauf</h3>
+	              <ol>
+	                <li>Füge ein Repository in GitSy hinzu</li>
+	                <li>Wähle einen leeren lokalen Ordner für dieses Projekt</li>
+	                <li>Bearbeite Dateien in diesem Ordner mit einer anderen App</li>
+	                <li>Kehre zu GitSy zurück und starte die Synchronisation</li>
+	                <li>GitSy committet lokale Änderungen, führt Pull aus und pusht Updates</li>
+	              </ol>
               
               <div class="warning-box">
                 <h4>⚠️ Wichtig</h4>
-                <p>Deine erste Synchronisation kann einige Momente dauern, da GitSy die anfängliche Repository-Struktur einrichtet.</p>
+	                <p>Der Ordner muss leer sein, wenn du ein neues Repository verbindest.</p>
               </div>
             </section>
 
             <section id="repositories" class="doc-section">
               <h2>Repository-Einrichtung</h2>
               <p>
-                GitSy unterstützt verschiedene Git-Hosting-Services und Konfigurationen. 
-                Hier erfährst du, wie du Repositories für verschiedene Anbieter einrichtest.
+	                GitSy dokumentiert derzeit HTTPS-Repository-Zugriff. GitHub, GitLab und selbst
+	                gehostete HTTPS-Git-Server sind die primär unterstützten Ziele.
               </p>
               
               <h3>GitHub</h3>
@@ -166,8 +166,8 @@ import Footer from '../../components/Footer.astro';
             <section id="authentication" class="doc-section">
               <h2>Authentifizierung</h2>
               <p>
-                Sichere Authentifizierung ist für den Zugriff auf dein Git-Repository unerlässlich. 
-                GitSy unterstützt mehrere Authentifizierungsmethoden.
+	                GitSy verwendet Zugangsdaten im Benutzername/Passwort-Stil für HTTPS-Git-Zugriff.
+	                Für GitHub und GitLab solltest du ein Personal Access Token statt deines Kontopassworts verwenden.
               </p>
               
               <h3>Personal Access Token (Empfohlen)</h3>
@@ -179,161 +179,114 @@ import Footer from '../../components/Footer.astro';
                 <li>Kopiere den Token und füge ihn in GitSy ein</li>
               </ol>
               
-              <h3>Benutzername/Passwort</h3>
-              <p>
-                Du kannst auch deinen regulären Benutzernamen und dein Passwort verwenden, aber diese Methode 
-                ist weniger sicher und funktioniert möglicherweise nicht bei allen Anbietern.
-              </p>
-              
-              <div class="tip-box">
+	              <div class="tip-box">
                 <h4>🔒 Sicherheitstipp</h4>
                 <p>Verwende immer Personal Access Tokens anstelle von Passwörtern. Sie sind sicherer und können bei Bedarf einfach widerrufen werden.</p>
               </div>
             </section>
 
-            <section id="sync-settings" class="doc-section">
-              <h2>Synchronisationseinstellungen</h2>
-              <p>
-                GitSy bietet flexible Synchronisationsoptionen, um ein Gleichgewicht zwischen 
-                Echtzeit-Updates und Akkulaufzeit zu schaffen.
-              </p>
-              
-              <h3>Synchronisationsmodi</h3>
-              <ul>
-                <li><strong>Automatisch:</strong> Synchronisiert bei jeder Änderung</li>
-                <li><strong>Manuell:</strong> Synchronisiert nur, wenn du die Sync-Schaltfläche tippst</li>
-                <li><strong>Geplant:</strong> Synchronisiert in regelmäßigen Abständen</li>
-              </ul>
-              
-              <h3>Synchronisationshäufigkeit</h3>
-              <p>Bei der Verwendung der geplanten Synchronisation kannst du wählen aus:</p>
-              <ul>
-                <li>Alle 5 Minuten</li>
-                <li>Alle 15 Minuten</li>
-                <li>Jede Stunde</li>
-                <li>Alle 6 Stunden</li>
-                <li>Täglich</li>
-              </ul>
-            </section>
+	            <section id="sync" class="doc-section">
+	              <h2>Synchronisation</h2>
+	              <p>
+	                GitSy synchronisiert über einen Android-Foreground-Service, solange Arbeit läuft.
+	                Du kannst die Synchronisation manuell für ein Projekt oder für alle Projekte starten.
+	              </p>
+	              
+	              <h3>Verfügbare Aktionen</h3>
+	              <ul>
+	                <li><strong>Repository synchronisieren:</strong> Sync für ein konfiguriertes Projekt starten</li>
+	                <li><strong>Alle synchronisieren:</strong> Alle konfigurierten Projekte einreihen</li>
+	                <li><strong>Periodische Prüfung:</strong> Beim Öffnen der App können bereite Projekte älter als eine Stunde eingereiht werden</li>
+	              </ul>
+	              
+	              <h3>Was Sync macht</h3>
+	              <ul>
+	                <li>Kopiert Änderungen aus dem ausgewählten Android-Ordner in die Git-Arbeitskopie der App</li>
+	                <li>Erstellt einen Commit, wenn lokale Änderungen vorhanden sind</li>
+	                <li>Pullt Remote-Änderungen aus dem Repository</li>
+	                <li>Kopiert das synchronisierte Ergebnis zurück in den ausgewählten Android-Ordner</li>
+	              </ul>
+	            </section>
 
-            <section id="note-management" class="doc-section">
-              <h2>Notizverwaltung</h2>
-              <p>
-                GitSy bietet leistungsstarke Tools zur Organisation und Verwaltung deiner Notizen, 
-                während die Benutzeroberfläche sauber und einfach bleibt.
-              </p>
-              
-              <h3>Notizorganisation</h3>
-              <ul>
-                <li><strong>Ordner:</strong> Organisiere Notizen in Ordnern und Unterordnern</li>
-                <li><strong>Tags:</strong> Füge Tags zu Notizen für einfache Kategorisierung hinzu</li>
-                <li><strong>Favoriten:</strong> Markiere wichtige Notizen als Favoriten</li>
-                <li><strong>Kürzlich:</strong> Schneller Zugriff auf kürzlich geänderte Notizen</li>
-              </ul>
-              
-              <h3>Notizaktionen</h3>
-              <ul>
-                <li>Notizen erstellen, bearbeiten und löschen</li>
-                <li>Notizen für Vorlagen duplizieren</li>
-                <li>Notizen als Text oder Markdown teilen</li>
-                <li>Notizen in andere Apps exportieren</li>
-              </ul>
-            </section>
+	            <section id="project-management" class="doc-section">
+	              <h2>Projektverwaltung</h2>
+	              <p>
+	                Jedes Projekt speichert Repository-URL, Zugangsdaten und den Android-Ordner, der
+	                synchronisiert wird.
+	              </p>
+	              
+	              <h3>Verfügbare Aktionen</h3>
+	              <ul>
+	                <li>Repository-Projekt hinzufügen</li>
+	                <li>Repository-URL und Zugangsdaten bearbeiten</li>
+	                <li>Projekt aus GitSy löschen</li>
+	                <li>Ein Projekt über das Kontextmenü synchronisieren</li>
+	              </ul>
+	            </section>
 
-            <section id="markdown" class="doc-section">
-              <h2>Markdown-Unterstützung</h2>
-              <p>
-                GitSy unterstützt vollständig Markdown-Formatierung, wodurch es einfach ist, 
-                reichhaltige, formatierte Notizen zu erstellen, die auf jedem Gerät großartig aussehen.
-              </p>
-              
-              <h3>Unterstützte Markdown-Funktionen</h3>
-              <div class="code-block">
-                <h4>Überschriften</h4>
-                <code># H1<br>## H2<br>### H3</code>
-              </div>
-              
-              <div class="code-block">
-                <h4>Textformatierung</h4>
-                <code>**Fetter Text**<br>*Kursiver Text*<br>~~Durchgestrichener Text~~</code>
-              </div>
-              
-              <div class="code-block">
-                <h4>Listen</h4>
-                <code>- Ungeordnete Liste<br>1. Geordnete Liste<br>- [ ] Aufgabenliste</code>
-              </div>
-              
-              <div class="code-block">
-                <h4>Links und Bilder</h4>
-                <code>[Link-Text](URL)<br>![Alt-Text](bild-url)</code>
-              </div>
-            </section>
+	            <section id="storage" class="doc-section">
+	              <h2>Ordnerzugriff</h2>
+	              <p>
+	                GitSy verwendet Androids Storage Access Framework. Du erteilst explizit Zugriff auf
+	                den Ordner jedes Projekts, und GitSy speichert diese Berechtigung für zukünftige Sync-Läufe.
+	              </p>
+	              
+	              <div class="tip-box">
+	                <h4>Tipp</h4>
+	                <p>Nutze einen Editor, der mit demselben Android-Ordner arbeiten kann. GitSy synchronisiert, bearbeitet aber nicht.</p>
+	              </div>
+	            </section>
 
-            <section id="search" class="doc-section">
-              <h2>Suche & Organisation</h2>
-              <p>
-                Finde jede Notiz schnell mit GitSy' leistungsstarken Suchfunktionen 
-                und Organisationsfeatures.
-              </p>
-              
-              <h3>Suchfunktionen</h3>
-              <ul>
-                <li><strong>Volltext-Suche:</strong> Suche innerhalb des Notizinhalts</li>
-                <li><strong>Titel-Suche:</strong> Finde Notizen nach Titel</li>
-                <li><strong>Tag-Suche:</strong> Filtere nach Tags</li>
-                <li><strong>Datumsfilter:</strong> Finde Notizen nach Erstellungs- oder Änderungsdatum</li>
-              </ul>
-              
-              <h3>Sortieroptionen</h3>
-              <ul>
-                <li>Nach Änderungsdatum (neueste zuerst)</li>
-                <li>Nach Erstellungsdatum</li>
-                <li>Alphabetisch nach Titel</li>
-                <li>Nach Größe</li>
-              </ul>
-            </section>
+	            <section id="roadmap" class="doc-section">
+	              <h2>Geplante Funktionen</h2>
+	              <p>
+	                Einige früher auf der Website beschriebene Funktionen gehören nicht zur aktuellen App.
+	                Sie werden stattdessen als zukünftige Arbeit verfolgt.
+	              </p>
+	              
+	              <ul>
+	                <li>Markdown-Vorschau und Bearbeitungshilfen</li>
+	                <li>Suche, Tags, Favoriten und Filter</li>
+	                <li>Konfigurierbare zeitgesteuerte Synchronisation</li>
+	                <li>OAuth- und SSH-Authentifizierung</li>
+	                <li>Export- und Teilen-Funktionen in der App</li>
+	              </ul>
+	            </section>
 
-            <section id="conflict-resolution" class="doc-section">
-              <h2>Konfliktlösung</h2>
-              <p>
-                Wenn dieselbe Notiz gleichzeitig auf mehreren Geräten bearbeitet wird, 
-                verwendet GitSy Gits Konfliktlösungssystem, um Konflikte elegant zu behandeln.
-              </p>
+	            <section id="conflicts" class="doc-section">
+	              <h2>Konflikte</h2>
+	              <p>
+	                Git-Konflikte können entstehen, wenn dieselben Dateien lokal und remote geändert
+	                werden. Die aktuelle Konfliktbehandlung basiert auf Git/JGit-Verhalten während der
+	                Synchronisation; eine interaktive Konfliktprüfung ist geplant, aber noch nicht implementiert.
+	              </p>
               
               <h3>Wie Konflikte entstehen</h3>
               <p>
                 Konflikte treten auf, wenn:
               </p>
               <ul>
-                <li>Dieselbe Notiz auf mehreren Geräten bearbeitet wird</li>
+	                <li>Dieselbe Datei auf mehreren Geräten bearbeitet wird</li>
                 <li>Änderungen offline vorgenommen werden</li>
                 <li>Netzwerkprobleme eine ordnungsgemäße Synchronisation verhindern</li>
               </ul>
               
-              <h3>Konfliktlösungsprozess</h3>
-              <ol>
-                <li>GitSy erkennt den Konflikt während der Synchronisation</li>
-                <li>Dir werden beide Versionen der Notiz präsentiert</li>
-                <li>Wähle, welche Version behalten oder manuell zusammengeführt werden soll</li>
-                <li>Die gelöste Notiz wird gespeichert und synchronisiert</li>
-              </ol>
-              
-              <div class="tip-box">
-                <h4>💡 Best Practice</h4>
-                <p>Um Konflikte zu minimieren, versuche die Bearbeitung einer Notiz abzuschließen, bevor du zu einem anderen Gerät wechselst.</p>
-              </div>
-            </section>
+	              <div class="tip-box">
+	                <h4>💡 Best Practice</h4>
+	                <p>Um Konflikte zu minimieren, synchronisiere vor und nach der Bearbeitung derselben Dateien auf einem anderen Gerät.</p>
+	              </div>
+	            </section>
 
             <section id="backup" class="doc-section">
               <h2>Backup & Wiederherstellung</h2>
               <p>
-                Deine Notizen werden automatisch in deinem Git-Repository gesichert, 
-                aber GitSy bietet auch zusätzliche Backup-Optionen für extra Sicherheit.
+	                Jede erfolgreiche Synchronisation pusht den ausgewählten Ordner in dein Git-Repository.
+	                Das Repository ist der Backup- und Versionsverlaufsmechanismus.
               </p>
               
               <h3>Automatisches Git-Backup</h3>
               <p>
-                Jedes Mal, wenn du synchronisierst, werden deine Notizen in deinem Git-Repository gesichert. 
+	                Jedes Mal, wenn du erfolgreich synchronisierst, werden deine Dateien in dein Git-Repository gepusht. 
                 Das bedeutet, du hast:
               </p>
               <ul>
@@ -342,15 +295,7 @@ import Footer from '../../components/Footer.astro';
                 <li>Wiederherstellung von jedem Zeitpunkt</li>
               </ul>
               
-              <h3>Manueller Export</h3>
-              <p>
-                Du kannst deine Notizen auch manuell exportieren:
-              </p>
-              <ul>
-                <li>Alle Notizen als ZIP-Datei exportieren</li>
-                <li>Einzelne Notizen als Markdown-Dateien exportieren</li>
-                <li>Notizen per E-Mail oder andere Apps teilen</li>
-              </ul>
+	              <p>Du kannst das Repository mit Standard-Git-Werkzeugen außerhalb von GitSy klonen oder exportieren.</p>
             </section>
 
             <section id="troubleshooting" class="doc-section">
@@ -361,7 +306,7 @@ import Footer from '../../components/Footer.astro';
               
               <h3>Synchronisationsprobleme</h3>
               <div class="troubleshoot-item">
-                <h4>Problem: Notizen synchronisieren nicht</h4>
+	                <h4>Problem: Dateien synchronisieren nicht</h4>
                 <p><strong>Lösungen:</strong></p>
                 <ul>
                   <li>Überprüfe deine Internetverbindung</li>

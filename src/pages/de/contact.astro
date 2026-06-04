@@ -68,45 +68,9 @@ import Footer from '../../components/Footer.astro';
 
           <div class="contact-form-container">
             <div class="contact-form">
-              <h2>Sende uns eine Nachricht</h2>
-              <p>Fülle das untenstehende Formular aus und wir melden uns so schnell wie möglich bei dir.</p>
-
-              <form class="form">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                  <label for="email">E-Mail</label>
-                  <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                  <label for="subject">Betreff</label>
-                  <select id="subject" name="subject" required>
-                    <option value="">Betreff auswählen</option>
-                    <option value="support">Technischer Support</option>
-                    <option value="bug">Fehlerbericht</option>
-                    <option value="feature">Feature-Anfrage</option>
-                    <option value="feedback">Allgemeines Feedback</option>
-                    <option value="other">Sonstiges</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="message">Nachricht</label>
-                  <textarea id="message" name="message" rows="6" required placeholder="Bitte beschreibe deine Frage oder dein Problem detailliert..."></textarea>
-                </div>
-
-                <div class="form-group">
-                  <label for="device-info">Geräteinformationen (Optional)</label>
-                  <input type="text" id="device-info" name="device-info" placeholder="z.B. Samsung Galaxy S21, Android 12">
-                  <small>Dies hilft uns, besseren technischen Support zu bieten</small>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-large">Nachricht senden</button>
-              </form>
+              <h2>E-Mail-Support</h2>
+              <p>Es gibt noch kein Website-Kontaktformular. Sende Support-Anfragen per E-Mail und nenne Android-Version, App-Version, Git-Anbieter und eine kurze Beschreibung des Problems.</p>
+              <a href="mailto:support@gitsy.de" class="btn btn-primary btn-large">E-Mail an support@gitsy.de</a>
             </div>
           </div>
         </div>
@@ -148,7 +112,7 @@ import Footer from '../../components/Footer.astro';
             </div>
 
             <div class="faq-item">
-              <h3>Kann ich meine Notizen exportieren?</h3>
+              <h3>Kann ich mein Repository exportieren?</h3>
               <p>
 	                GitSy speichert den ausgewählten Ordner in einem Git-Repository. Du kannst dieses
 	                Repository mit Standard-Git-Werkzeugen klonen oder exportieren.
@@ -408,27 +372,3 @@ import Footer from '../../components/Footer.astro';
     }
   }
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('.form');
-    
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
-      
-      // Simple validation
-      if (!data.name || !data.email || !data.subject || !data.message) {
-        alert('Bitte fülle alle erforderlichen Felder aus.');
-        return;
-      }
-      
-      // In a real application, you would send this data to your server
-      alert('Vielen Dank für deine Nachricht! Wir melden uns bald bei dir.');
-      form.reset();
-    });
-  });
-</script>
