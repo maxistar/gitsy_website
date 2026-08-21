@@ -10,7 +10,6 @@ title: Roadmap
 
 - [x] create MVP
 - [ ] connect repository via OAuth
-- [ ] support SSH keys for Git authentication
 - [ ] configurable scheduled synchronization
 - [ ] richer note management inside the app
 - [ ] Markdown preview and editing helpers

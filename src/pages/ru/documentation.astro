@@ -140,8 +140,8 @@ import Footer from '../../components/Footer.astro';
             <section id="repositories" class="doc-section">
               <h2>Настройка репозитория</h2>
               <p>
-	                GitSy сейчас документирует доступ к HTTPS-репозиториям. GitHub, GitLab и собственные
-	                HTTPS Git-серверы являются основными поддерживаемыми вариантами.
+	                GitSy поддерживает доступ к репозиториям по HTTPS и SSH. GitHub, GitLab и совместимые
+	                собственные Git-серверы можно подключать способом, который поддерживает сервер.
               </p>
               
               <h3>GitHub</h3>
@@ -161,13 +161,19 @@ import Footer from '../../components/Footer.astro';
                 <p><strong>Формат URL репозитория:</strong></p>
                 <code>https://your-git-server.com/username/repository-name.git</code>
               </div>
+
+              <h3>SSH</h3>
+              <div class="code-block">
+                <p><strong>Форматы URL репозитория:</strong></p>
+                <code>git@github.com:username/repository-name.git</code><br />
+                <code>ssh://git@your-git-server.com:2222/username/repository-name.git</code>
+              </div>
             </section>
 
             <section id="authentication" class="doc-section">
               <h2>Аутентификация</h2>
               <p>
-	                GitSy использует учетные данные в формате username/password для HTTPS Git-доступа.
-	                Для GitHub и GitLab используйте персональный токен доступа вместо пароля аккаунта.
+                Выберите способ аутентификации, соответствующий URL репозитория: HTTPS использует имя учётной записи и персональный токен доступа, а SSH — приватный ключ, настроенный в GitSy.
               </p>
               
               <h3>Персональный токен доступа (Рекомендуется)</h3>
@@ -183,6 +189,10 @@ import Footer from '../../components/Footer.astro';
                 <h4>🔒 Совет по безопасности</h4>
                 <p>Всегда используйте персональные токены доступа вместо паролей. Они более безопасны и могут быть легко отозваны при необходимости.</p>
               </div>
+
+              <h3>Приватный SSH-ключ</h3>
+              <p>В настройках импортируйте один RSA- или Ed25519-приватный ключ, который GitSy будет использовать для всех SSH-проектов. При добавлении репозитория выберите аутентификацию по SSH-ключу и укажите SCP-подобный URL или канонический URL <code>ssh://</code>.</p>
+              <p>При первом подключении к SSH-хосту проверьте показанные хост, порт, алгоритм и SHA-256 fingerprint перед подтверждением доверия. GitSy запоминает совпадающий доверенный ключ хоста и предупреждает, если он изменится.</p>
             </section>
 
 	            <section id="sync" class="doc-section">
@@ -249,7 +259,7 @@ import Footer from '../../components/Footer.astro';
 	                <li>Предпросмотр Markdown и помощники редактирования</li>
 	                <li>Поиск, теги, избранное и фильтры</li>
 	                <li>Настраиваемая синхронизация по расписанию</li>
-	                <li>OAuth и SSH-аутентификация</li>
+	                <li>OAuth-аутентификация</li>
 	                <li>Экспорт и sharing из интерфейса приложения</li>
 	              </ul>
 	            </section>

@@ -7,7 +7,6 @@ title: Roadmap
 
 - [x] MVP erstellen
 - [ ] Repository über OAuth verbinden
-- [ ] SSH-Schlüssel für Git-Authentifizierung unterstützen
 - [ ] Konfigurierbare zeitgesteuerte Synchronisation
 - [ ] Erweiterte Notizverwaltung in der App
 - [ ] Markdown-Vorschau und Bearbeitungshilfen

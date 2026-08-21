@@ -140,8 +140,8 @@ import Footer from '../../components/Footer.astro';
             <section id="repositories" class="doc-section">
               <h2>Repository-Einrichtung</h2>
               <p>
-	                GitSy dokumentiert derzeit HTTPS-Repository-Zugriff. GitHub, GitLab und selbst
-	                gehostete HTTPS-Git-Server sind die primär unterstützten Ziele.
+	                GitSy unterstützt Repository-Zugriff über HTTPS und SSH. GitHub, GitLab und
+	                kompatible selbst gehostete Git-Server können mit der vom Server angebotenen Methode verbunden werden.
               </p>
               
               <h3>GitHub</h3>
@@ -161,13 +161,19 @@ import Footer from '../../components/Footer.astro';
                 <p><strong>Repository-URL-Format:</strong></p>
                 <code>https://dein-git-server.com/benutzername/repository-name.git</code>
               </div>
+
+              <h3>SSH</h3>
+              <div class="code-block">
+                <p><strong>Repository-URL-Formate:</strong></p>
+                <code>git@github.com:benutzername/repository-name.git</code><br />
+                <code>ssh://git@dein-git-server.com:2222/benutzername/repository-name.git</code>
+              </div>
             </section>
 
             <section id="authentication" class="doc-section">
               <h2>Authentifizierung</h2>
               <p>
-	                GitSy verwendet Zugangsdaten im Benutzername/Passwort-Stil für HTTPS-Git-Zugriff.
-	                Für GitHub und GitLab solltest du ein Personal Access Token statt deines Kontopassworts verwenden.
+                Wähle die Authentifizierung passend zur Repository-URL: HTTPS verwendet einen Kontonamen und ein Personal Access Token, SSH einen in GitSy eingerichteten privaten Schlüssel.
               </p>
               
               <h3>Personal Access Token (Empfohlen)</h3>
@@ -183,6 +189,10 @@ import Footer from '../../components/Footer.astro';
                 <h4>🔒 Sicherheitstipp</h4>
                 <p>Verwende immer Personal Access Tokens anstelle von Passwörtern. Sie sind sicherer und können bei Bedarf einfach widerrufen werden.</p>
               </div>
+
+              <h3>Privater SSH-Schlüssel</h3>
+              <p>Importiere in den Einstellungen einen RSA- oder Ed25519-Privatschlüssel, den GitSy für alle SSH-Projekte verwendet. Wähle beim Hinzufügen des Repositorys SSH-Schlüssel-Authentifizierung und gib entweder eine SCP-ähnliche URL oder eine kanonische <code>ssh://</code>-URL ein.</p>
+              <p>Wenn GitSy sich erstmals mit einem SSH-Host verbindet, prüfe Host, Port, Algorithmus und den angezeigten SHA-256-Fingerprint, bevor du ihm vertraust. GitSy merkt sich passende vertrauenswürdige Host-Schlüssel und warnt bei Änderungen.</p>
             </section>
 
 	            <section id="sync" class="doc-section">
@@ -248,7 +258,7 @@ import Footer from '../../components/Footer.astro';
 	                <li>Markdown-Vorschau und Bearbeitungshilfen</li>
 	                <li>Suche, Tags, Favoriten und Filter</li>
 	                <li>Konfigurierbare zeitgesteuerte Synchronisation</li>
-	                <li>OAuth- und SSH-Authentifizierung</li>
+	                <li>OAuth-Authentifizierung</li>
 	                <li>Export- und Teilen-Funktionen in der App</li>
 	              </ul>
 	            </section>

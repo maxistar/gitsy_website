@@ -7,7 +7,7 @@ title: Frequently Asked Questions
 
 > What is GitSy?
 
-GitSy is an Android app that synchronizes a folder you select on your device with an HTTPS Git repository. It works as a synchronization layer between that folder and a repository you control.
+GitSy is an Android app that synchronizes a folder you select on your device with an HTTPS or SSH Git repository. It works as a synchronization layer between that folder and a repository you control.
 
 > Is GitSy a note editor?
 
@@ -29,15 +29,15 @@ When you add a project, GitSy clones the repository and copies its contents into
 
 > Which Git services are supported?
 
-GitSy supports repositories available through HTTPS. GitHub, GitLab, and compatible self-hosted Git servers are the documented options. See the [repository setup documentation](/documentation/#repositories) for URL examples.
+GitSy supports HTTPS repositories with username/token authentication and SSH repositories with a private key. GitHub, GitLab, and compatible self-hosted Git servers are documented options. See the [repository setup documentation](/documentation/#repositories) for URL examples.
 
 > Can I use an existing repository?
 
-Yes. Enter its HTTPS clone URL and select an empty Android folder. GitSy clones the repository into its internal working copy and then copies the files to the selected folder.
+Yes. Enter its HTTPS or SSH clone URL and select an empty Android folder. GitSy clones the repository into its internal working copy and then copies the files to the selected folder.
 
 > Does GitSy support SSH repository URLs?
 
-No. The current version supports HTTPS repository access. SSH and OAuth authentication are planned features.
+Yes. In Settings, import one RSA or Ed25519 private key, then select SSH key authentication when you add a project. GitSy accepts SCP-like URLs such as <code>git@host:owner/repository.git</code> and canonical <code>ssh://</code> URLs. Confirm the displayed host fingerprint on the first connection; OAuth authentication is still planned. See the [repository setup documentation](/documentation/#authentication) for details.
 
 > Why can I not use my GitHub or GitLab account password?
 
@@ -111,7 +111,7 @@ GitSy does not currently include a version-history interface. Use your Git provi
 
 > Why does authentication fail?
 
-Check the HTTPS repository URL, username, token value, token expiration, and repository read/write permissions. Account passwords normally do not work with GitHub or GitLab.
+For HTTPS, check the repository URL, username, token value, token expiration, and repository read/write permissions; account passwords normally do not work with GitHub or GitLab. For SSH, check that a supported private key is configured and that the repository URL and trusted host fingerprint are correct.
 
 > Why do I see a cloning or synchronization error?
 

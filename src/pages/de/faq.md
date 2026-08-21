@@ -7,7 +7,7 @@ title: Häufig gestellte Fragen
 
 > Was ist GitSy?
 
-GitSy ist eine Android-App, die einen auf dem Gerät ausgewählten Ordner mit einem Git-Repository über HTTPS synchronisiert. Die App dient als Synchronisationsschicht zwischen diesem Ordner und einem Repository unter deiner Kontrolle.
+GitSy ist eine Android-App, die einen auf dem Gerät ausgewählten Ordner mit einem Git-Repository über HTTPS oder SSH synchronisiert. Die App dient als Synchronisationsschicht zwischen diesem Ordner und einem Repository unter deiner Kontrolle.
 
 > Ist GitSy ein Notiz-Editor?
 
@@ -29,15 +29,15 @@ Beim Hinzufügen eines Projekts klont GitSy das Repository und kopiert dessen In
 
 > Welche Git-Dienste werden unterstützt?
 
-GitSy unterstützt Repositories, die über HTTPS erreichbar sind. GitHub, GitLab und kompatible selbst gehostete Git-Server sind die dokumentierten Optionen. URL-Beispiele findest du in der [Dokumentation zur Repository-Einrichtung](/de/documentation/#repositories).
+GitSy unterstützt HTTPS-Repositories mit Benutzername/Token-Authentifizierung und SSH-Repositories mit privatem Schlüssel. GitHub, GitLab und kompatible selbst gehostete Git-Server sind dokumentierte Optionen. URL-Beispiele findest du in der [Dokumentation zur Repository-Einrichtung](/de/documentation/#repositories).
 
 > Kann ich ein bestehendes Repository verwenden?
 
-Ja. Gib seine HTTPS-Klon-URL ein und wähle einen leeren Android-Ordner. GitSy klont das Repository in eine interne Arbeitskopie und kopiert anschließend die Dateien in den ausgewählten Ordner.
+Ja. Gib seine HTTPS- oder SSH-Klon-URL ein und wähle einen leeren Android-Ordner. GitSy klont das Repository in eine interne Arbeitskopie und kopiert anschließend die Dateien in den ausgewählten Ordner.
 
 > Unterstützt GitSy SSH-Repository-URLs?
 
-Nein. Die aktuelle Version unterstützt Repository-Zugriff über HTTPS. SSH- und OAuth-Authentifizierung sind geplant.
+Ja. Importiere in den Einstellungen einen RSA- oder Ed25519-Privatschlüssel und wähle beim Hinzufügen eines Projekts SSH-Schlüssel-Authentifizierung. GitSy akzeptiert SCP-ähnliche URLs wie <code>git@host:owner/repository.git</code> und kanonische <code>ssh://</code>-URLs. Bestätige beim ersten Verbindungsaufbau den angezeigten Host-Fingerprint; OAuth-Authentifizierung ist weiterhin geplant. Details stehen in der [Dokumentation zur Repository-Einrichtung](/de/documentation/#authentication).
 
 > Warum kann ich mein GitHub- oder GitLab-Kontopasswort nicht verwenden?
 
@@ -111,7 +111,7 @@ GitSy bietet derzeit keine Oberfläche für den Versionsverlauf. Verwende deinen
 
 > Warum schlägt die Authentifizierung fehl?
 
-Prüfe die HTTPS-Repository-URL, den Benutzernamen, den Token-Wert, den Ablauf des Tokens und die Lese- und Schreibberechtigungen für das Repository. Kontopasswörter funktionieren normalerweise nicht mit GitHub oder GitLab.
+Für HTTPS prüfe Repository-URL, Benutzernamen, Token-Wert, Token-Ablauf und Lese-/Schreibberechtigungen; Kontopasswörter funktionieren normalerweise nicht mit GitHub oder GitLab. Für SSH prüfe, ob ein unterstützter privater Schlüssel eingerichtet ist und Repository-URL sowie vertrauenswürdiger Host-Fingerprint stimmen.
 
 > Warum wird ein Klon- oder Synchronisationsfehler angezeigt?
 

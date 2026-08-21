@@ -139,8 +139,8 @@ import Layout from '../layouts/Layout.astro';
             <section id="repositories" class="doc-section">
               <h2>Repository Setup</h2>
               <p>
-	                GitSy currently documents HTTPS repository access. GitHub, GitLab, and self-hosted
-	                HTTPS Git servers are the primary supported targets.
+                GitSy supports both HTTPS and SSH repository access. GitHub, GitLab, and compatible
+                self-hosted Git servers can be connected with the method your server provides.
               </p>
               
               <h3>GitHub</h3>
@@ -160,11 +160,18 @@ import Layout from '../layouts/Layout.astro';
                 <p><strong>Repository URL format:</strong></p>
                 <code>https://your-git-server.com/username/repository-name.git</code>
               </div>
+
+              <h3>SSH</h3>
+              <div class="code-block">
+                <p><strong>Repository URL formats:</strong></p>
+                <code>git@github.com:username/repository-name.git</code><br />
+                <code>ssh://git@your-git-server.com:2222/username/repository-name.git</code>
+              </div>
             </section>
 
             <section id="authentication" class="doc-section">
               <h2>Authentication</h2>
-	              <p>GitSy uses username/password-style credentials for HTTPS Git access. For GitHub and GitLab, use a personal access token instead of your account password.</p>
+	              <p>Choose the authentication method that matches your repository URL: HTTPS uses an account name and personal access token, while SSH uses a private key configured in GitSy.</p>
               
               <h3>Personal Access Token (Recommended)</h3>
               <p>The most secure method is using a personal access token:</p>
@@ -179,6 +186,10 @@ import Layout from '../layouts/Layout.astro';
 	                <h4>🔒 Security Tip</h4>
 	                <p>Always use personal access tokens instead of passwords. They're more secure and can be easily revoked if needed.</p>
 	              </div>
+
+              <h3>SSH Private Key</h3>
+              <p>In Settings, import one RSA or Ed25519 private key for GitSy to use with all SSH projects. Then select SSH key authentication when adding the repository and enter either an SCP-like URL or a canonical <code>ssh://</code> URL.</p>
+              <p>When GitSy connects to a new SSH host for the first time, verify its displayed host, port, algorithm, and SHA-256 fingerprint before trusting it. GitSy remembers a trusted matching host key and warns if it changes.</p>
 	            </section>
 
 	            <section id="sync" class="doc-section">
@@ -244,7 +255,7 @@ import Layout from '../layouts/Layout.astro';
 	                <li>Markdown preview and editing helpers</li>
 	                <li>Search, tags, favorites, and filters</li>
 	                <li>Configurable scheduled synchronization</li>
-	                <li>OAuth and SSH authentication</li>
+	                <li>OAuth authentication</li>
 	                <li>In-app export and sharing tools</li>
 	              </ul>
 	            </section>

@@ -37,7 +37,8 @@ import Layout from '../layouts/Layout.astro';
             
             <h3>2.1 Information You Provide</h3>
             <ul>
-              <li><strong>Git Repository Credentials:</strong> Repository URLs, usernames, and access tokens you provide to connect to your Git repositories</li>
+              <li><strong>HTTPS repository credentials:</strong> Repository URLs, usernames, and access tokens you provide to connect to HTTPS Git repositories</li>
+              <li><strong>SSH authentication data:</strong> The application-wide private key and, if you choose to retain it, its passphrase for SSH projects, plus trusted SSH host identities</li>
               <li><strong>Folder Content:</strong> The files in the folder you choose to synchronize, stored locally and in your Git repository</li>
               <li><strong>App Settings:</strong> Your preferences and configuration settings within the app</li>
             </ul>
@@ -84,8 +85,9 @@ import Layout from '../layouts/Layout.astro';
 
             <h3>4.2 Security Measures</h3>
             <ul>
-	              <li>Git traffic uses the security provided by HTTPS and your Git hosting provider</li>
-              <li>Git credentials are stored securely on your device using platform security features</li>
+	              <li>HTTPS Git traffic uses the security provided by HTTPS and your Git hosting provider</li>
+              <li>HTTPS credentials are stored securely on your device using platform security features</li>
+              <li>SSH private keys and retained passphrases are kept in protected app-private storage; GitSy asks you to confirm an unknown SSH host fingerprint and records trusted host identities on your device</li>
 	              <li>We do not operate a hosted notes backend for your synchronized files</li>
             </ul>
           </div>
