@@ -59,7 +59,7 @@ GitSy copies changes from the selected Android folder to its internal Git workin
 
 > Is synchronization automatic?
 
-You can manually synchronize one project or all projects. When GitSy opens, it may also queue ready projects that have not synchronized for more than one hour. Configurable background schedules are not currently available.
+You can manually synchronize one project or all projects. When GitSy opens, it may also queue ready projects according to your startup setting. In Settings you can optionally enable daily background synchronization and choose a local time (02:00 by default). Android runs scheduled work on a best-effort basis, so it may start later; a network connection is required. Each project gets at most one attempt per daily run, and errors that need authentication, SSH, or folder-access changes remain visible in GitSy for you to resolve.
 
 > Can I edit files while offline?
 

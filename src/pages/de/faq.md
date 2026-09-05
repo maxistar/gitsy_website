@@ -59,7 +59,7 @@ GitSy kopiert Änderungen aus dem ausgewählten Android-Ordner in seine interne 
 
 > Erfolgt die Synchronisation automatisch?
 
-Du kannst ein einzelnes Projekt oder alle Projekte manuell synchronisieren. Beim Öffnen von GitSy kann die App außerdem bereite Projekte einreihen, die seit mehr als einer Stunde nicht synchronisiert wurden. Konfigurierbare Hintergrundzeitpläne sind derzeit nicht verfügbar.
+Du kannst ein einzelnes Projekt oder alle Projekte manuell synchronisieren. Beim Öffnen von GitSy kann die App außerdem bereite Projekte gemäß deiner Starteinstellung einreihen. In den Einstellungen kannst du optional die tägliche Hintergrundsynchronisierung aktivieren und eine lokale Uhrzeit wählen (standardmäßig 02:00). Android führt geplante Arbeit nach Möglichkeit aus, daher kann sie später starten; eine Netzwerkverbindung ist erforderlich. Jedes Projekt erhält höchstens einen Versuch pro täglichem Lauf. Fehler, die Änderungen an Authentifizierung, SSH oder Ordnerzugriff erfordern, bleiben zur Behebung in GitSy sichtbar.
 
 > Kann ich Dateien offline bearbeiten?
 

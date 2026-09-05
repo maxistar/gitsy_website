@@ -7,7 +7,7 @@ title: Roadmap
 
 - [x] MVP erstellen
 - [ ] Repository über OAuth verbinden
-- [ ] Konfigurierbare zeitgesteuerte Synchronisation
+- [x] Konfigurierbare zeitgesteuerte Synchronisation
 - [ ] Erweiterte Notizverwaltung in der App
 - [ ] Markdown-Vorschau und Bearbeitungshilfen
 - [ ] Anhänge und Bilder verarbeiten

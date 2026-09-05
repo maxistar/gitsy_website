@@ -10,7 +10,7 @@ title: Roadmap
 
 - [x] create MVP
 - [ ] connect repository via OAuth
-- [ ] configurable scheduled synchronization
+- [x] configurable scheduled synchronization
 - [ ] richer note management inside the app
 - [ ] Markdown preview and editing helpers
 - [ ] attachments and image handling
