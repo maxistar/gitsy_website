@@ -9,11 +9,11 @@ As of December 2024, Google now mandates that developers with personal accounts 
 
 ## Hot to Join closed testing? 
 
-Join the closed testing program for GitSy by following these steps:
+GitSy is currently distributed through the Google Play `alpha` closed-testing track. Join it by following these steps:
 
-1. Join the Google Group `Watch Face Beta Testers`: https://groups.google.com/g/watch-face-beta-testers/
-2. Open the testing enrollment page: https://play.google.com/apps/testing/me.maxistar.gitsy and confirm your beta tester status.
-3. Install the GitSy app from the Play Store: https://play.google.com/store/apps/details?id=me.maxistar.gitsy
+1. Open the testing enrollment page: https://play.google.com/apps/testing/me.maxistar.gitsy and confirm your tester status.
+2. Install the GitSy app from the Play Store: https://play.google.com/store/apps/details?id=me.maxistar.gitsy
+3. For technical release assets and checksums, see: https://github.com/maxistar/gitsy/releases/tag/v0.1.3
 
 Thank you for your help!
 

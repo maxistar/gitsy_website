@@ -10,11 +10,11 @@ title: Закрытое тестирование GitSy
 
 ## Как присоединиться к закрытому тестированию?
 
-Присоединитесь к программе закрытого тестирования GitSy, выполнив следующие шаги:
+GitSy сейчас распространяется через трек закрытого тестирования Google Play `alpha`. Подключитесь к нему:
 
-1. Вступите в группу Google `Watch Face Beta Testers`: https://groups.google.com/g/watch-face-beta-testers/
-2. Откройте страницу подключения к тестированию: https://play.google.com/apps/testing/me.maxistar.gitsy и подтвердите своё участие в бета-тестировании.
-3. Установите приложение GitSy из Google Play: https://play.google.com/store/apps/details?id=me.maxistar.gitsy
+1. Откройте страницу подключения к тестированию: https://play.google.com/apps/testing/me.maxistar.gitsy и подтвердите участие.
+2. Установите приложение GitSy из Google Play: https://play.google.com/store/apps/details?id=me.maxistar.gitsy
+3. Технические файлы релиза и контрольные суммы: https://github.com/maxistar/gitsy/releases/tag/v0.1.3
 
 Спасибо за вашу помощь!
 

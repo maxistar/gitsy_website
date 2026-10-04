@@ -10,11 +10,11 @@ Stand Dezember 2024 verlangt Google, dass Entwickler mit persönlichen Konten, d
 
 ## Wie nimmt man am geschlossenen Test teil?
 
-Tritt dem geschlossenen Testprogramm von GitSy in folgenden Schritten bei:
+GitSy wird derzeit über den Google-Play-Track `alpha` für geschlossene Tests verteilt. So nimmst du teil:
 
-1. Trete der Google-Gruppe `Watch Face Beta Testers` bei: https://groups.google.com/g/watch-face-beta-testers/
-2. Öffne die Testanmeldeseite: https://play.google.com/apps/testing/me.maxistar.gitsy und bestätige deinen Beta-Tester-Status.
-3. Installiere die GitSy-App aus dem Play Store: https://play.google.com/store/apps/details?id=me.maxistar.gitsy
+1. Öffne die Testanmeldeseite: https://play.google.com/apps/testing/me.maxistar.gitsy und bestätige deine Teilnahme.
+2. Installiere die GitSy-App aus dem Play Store: https://play.google.com/store/apps/details?id=me.maxistar.gitsy
+3. Technische Release-Dateien und Prüfsummen: https://github.com/maxistar/gitsy/releases/tag/v0.1.3
 
 Vielen Dank für deine Unterstützung!
 
